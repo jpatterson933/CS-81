@@ -39,3 +39,26 @@ for (i = 0; i <= 100; i++) {
     }
 }
 
+/* Create a chessboard using spaces and # symbols */
+
+let size = 8;
+let board = "";
+
+for (let y = 0; y < size; y++) {
+
+    for (let x = 0; x < size; x++) {
+
+        /* becuase the x is being looped inside of the y, then every other number will be odd
+        so 1 + 1 will give a space but 1 + 2 will give a # etc. etc then once the line is looped through
+        by the size of the variable it will go to the next line and then it will be 1 + 2, etc. etc. */
+
+        if ((x + y) % 2 == 0) {
+            board += " ";
+        } else {
+            board += "#";
+        }
+    }
+    board += "\n";
+}
+
+console.log(board);
