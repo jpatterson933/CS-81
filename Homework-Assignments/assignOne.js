@@ -1,8 +1,8 @@
 // Problem 1
 /*
     According to Eloguent Javascript by Marijn Haverbeke, the "Java language was being
-    heavily marketed and was gaining popularity" at the time, and someone thought it would
-    be a good idea to ride the popularity of Java and now we have JavaScript.
+    heavily marketed and was gaining popularity" at the time of JavaScripts creation, and 
+    someone thought it would be a good idea to ride the popularity of Java and now we have JavaScript.
 */
 // Problem 2
 
@@ -23,7 +23,7 @@ if (23 == "23") {
 
 // Problem 4
 
-let problemFour = `Infinity is ${5/0}`
+let problemFour = `Infinity is ${5 / 0}`
 console.log(problemFour)
 
 // ANSWER: "Infinity is Infinity"
@@ -38,7 +38,7 @@ console.log(problemSix)
 
 // Problem 7
 
-let problemSeven = "apples " + (false ? "apple" : (true ? "and" : "peaches")) + " " + ("ba" + "" + 3/"a" + "as");
+let problemSeven = "apples " + (false ? "apple" : (true ? "and" : "peaches")) + " " + ("ba" + "" + 3 / "a" + "as");
 
 console.log(problemSeven)
 
