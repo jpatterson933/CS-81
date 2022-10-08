@@ -27,16 +27,22 @@ A way to fix this would be to change all values to positive and then run the rec
 */
 
 function isEven(value) {
-    if (value == 0) {
-        console.log(true)
-        return true;
-    } else if (value == 1) {
-        console.log(false)
-        return false;
-    } else if (value > 1) {
-        isEven(value - 2)
-        // console.log("recurse!")
+
+    function find (value) {
+        if (value == 0) {
+            console.log(true)
+            return true;
+        } else if (value == 1) {
+            console.log(false)
+            return false;
+        } else if (value > 1) {
+            value - 2;
+            // isEven(value - 2)
+            // console.log("recurse!")
+        }
+
     }
+    find(value)
 }
 
 isEven(59)
@@ -64,7 +70,7 @@ let countBs = (word) => {
     }
 }
 
-countBs("BBBBBB") 
+// countBs("BBBBBB")
 
 let countChar = (word, character) => {
     let count = 0;
@@ -76,4 +82,4 @@ let countChar = (word, character) => {
     }
 }
 
-countChar("beezkneez", "e")
+// countChar("beezkneez", "e")
