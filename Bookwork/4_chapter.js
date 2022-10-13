@@ -30,7 +30,7 @@ function range(start, end) {
         rangeArray.push(i)
     }
     return rangeArray;
-}
+};
 // console.log(range(1, 10))
 // PART TWO
 function sum(array) {
@@ -39,7 +39,7 @@ function sum(array) {
         total += num;
     }
     return total;
-}
+};
 
 // console.log(sum(range(1, 10)));
 
@@ -68,7 +68,7 @@ function rangeTwo(start, end, step) {
     return rangeArray;
 };
 
-console.log(sum(rangeTwo(5, 1, -1)));
+// console.log(sum(rangeTwo(5, 1, -1)));
 
 /*
     Write two functions reverseArray and reverseArrayInPlace
@@ -76,31 +76,93 @@ console.log(sum(rangeTwo(5, 1, -1)));
     reverseArrayInPlace modifies the array given as argument by reversing its elements
     you MUST NOT use the standard reverse method
 */
-let listOfCars = ["bmw", "honda", "toyota", "ford", "tesla", "lucid"]
+let listOfCars = ["bmw", "honda", "toyota", "ford", "tesla", "lucid"];
 
 let reverseArray = (array) => {
-    console.log(array);
+    // console.log(array);
     let length = array.length;
-    console.log(length, "length")
+    // console.log(length, "length")
     let newArray = []
     for (let i = 0; i < length; i++) {
         let lastItem = array.pop()
         newArray.push(lastItem)
     }
-    console.log(newArray)
+    // console.log(newArray)
     return newArray;
-}
+};
 
 reverseArray(listOfCars);
 let listOfNumbers = ["one", "two", "three", "four", "five", "six"]
 
 function reverseArrayInPlace(array) {
-
-    for(let i = array.length - 1; i >= 0; i--) {
+    /*
+        so we take the array.length-1 and set it to i so an array of 6 elements will be 5
+        then we say if i is greater than or equal to 0 we want to get down by 1 so it should loop five times
+        then we splice the array at position 0 and add the element at position 5 and counting down so 5, 4, 3, 2, 1, 0        
+    */
+    for (let i = array.length - 1; i >= 0; i--) {
 
         array.splice(i, 0, array.shift())
     }
     return array;
-}
+};
 
-console.log(reverseArrayInPlace(listOfNumbers))
+// console.log(reverseArrayInPlace(listOfNumbers));
+
+/*
+    write a function arrayToList that build up a list structure like the one shown when given [1, 2, 3] as argument.
+    Also, write a listToArray function that produces an array from a list. 
+    Then, add a helper function prepend, which takes an element and a list and creates a new list that adds the element fo the front of the input list
+    write a function nth, which takes a list and a number and returns the element at the given position in the list (with zero referring to the first element) or undefined when there is no such element
+    If you have not already, also write a recursive version of nth    
+*/
+
+/* 
+    create a recursive function to create nested objects
+    first we say that if our array.length is 0, we have nothing else in the array and we will return the created object
+    else we say let the last be
+*/
+function arrayToList(array, object) {
+    if (array.length === 0) {
+        return object;
+    } else {
+        // this counts down our array length and sets it to last - starts with original length
+        let last = array[array.length - 1];
+        // console.log(last)
+        // array starts off as original array, then for the first round we set the new array to the original minus one
+        // we set the new array to NOT include the last element since it will be put into the object
+        // so if array is [1, 2, 3, 4] then new array will look like [1, 2, 3, 4].slice(0, 4 - 1) -> array.slice(0, 3) = [1, 2, 3] 
+        let newArray = array.slice(0, array.length - 1);
+        // this recursive functions starts by placing the last element in the array into the first object
+        // the first time it runs, it will not have the object parameter // the first time recurs it will have the object parameter
+        // the first object will be put into the rest: object position
+        // so it starts with the last element in the array and works forward until it has built out the entire object
+        // so if array is [1, 2, 3, 4] the first item to be created will be {value: 4, rest: null}
+        return arrayToList(newArray, { value: last, rest: object || null })
+    }
+};
+
+// console.log(arrayToList([1, 2, 3]));
+
+let set = ["table", "chairs", "rug"]
+let objectOne = arrayToList(set)
+
+function listToArray(object, array) {
+
+    Object.keys(object).forEach(key => {
+        console.log(key)
+    })
+    console.log(object)
+
+    for(let i = 0; i < object.length; i++) {
+        console.log(i)
+        console.log(Object.keys(object[i]))
+    }
+
+    console.log(Object.keys(object))
+
+
+
+};
+
+listToArray(objectOne)
