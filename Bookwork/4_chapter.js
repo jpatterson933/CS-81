@@ -66,6 +66,41 @@ function rangeTwo(start, end, step) {
             rangeArray.push(i)
         }
     return rangeArray;
+};
+
+console.log(sum(rangeTwo(5, 1, -1)));
+
+/*
+    Write two functions reverseArray and reverseArrayInPlace
+    reverseArray takes an array as argument and produces a NEW array that has the same elements in the inverse order.
+    reverseArrayInPlace modifies the array given as argument by reversing its elements
+    you MUST NOT use the standard reverse method
+*/
+let listOfCars = ["bmw", "honda", "toyota", "ford", "tesla", "lucid"]
+
+let reverseArray = (array) => {
+    console.log(array);
+    let length = array.length;
+    console.log(length, "length")
+    let newArray = []
+    for (let i = 0; i < length; i++) {
+        let lastItem = array.pop()
+        newArray.push(lastItem)
+    }
+    console.log(newArray)
+    return newArray;
 }
 
-console.log(sum(rangeTwo(5, 1, -1)))
+reverseArray(listOfCars);
+let listOfNumbers = ["one", "two", "three", "four", "five", "six"]
+
+function reverseArrayInPlace(array) {
+
+    for(let i = array.length - 1; i >= 0; i--) {
+
+        array.splice(i, 0, array.shift())
+    }
+    return array;
+}
+
+console.log(reverseArrayInPlace(listOfNumbers))
