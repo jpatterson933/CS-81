@@ -110,9 +110,9 @@ function reverseArrayInPlace(array) {
 // console.log(reverseArrayInPlace(listOfNumbers));
 
 /*
-    write a function arrayToList that build up a list structure like the one shown when given [1, 2, 3] as argument.
-    Also, write a listToArray function that produces an array from a list. 
-    Then, add a helper function prepend, which takes an element and a list and creates a new list that adds the element fo the front of the input list
+    1. write a function arrayToList that build up a list structure like the one shown when given [1, 2, 3] as argument.
+    2. write a listToArray function that produces an array from a list. 
+    Then, add a helper function prepend(), which takes an element and a list and creates a new list that adds the element fo the front of the input list
     write a function nth, which takes a list and a number and returns the element at the given position in the list (with zero referring to the first element) or undefined when there is no such element
     If you have not already, also write a recursive version of nth    
 */
@@ -146,23 +146,55 @@ function arrayToList(array, object) {
 
 let set = ["table", "chairs", "rug"]
 let objectOne = arrayToList(set)
-
+// create new arrays with whatever the keys are
+// if there is an object recurse it
+// push values into corresponding keysArray
 function listToArray(object, array) {
 
-    Object.keys(object).forEach(key => {
-        console.log(key)
-    })
-    console.log(object)
+    let newArray = []
 
-    for(let i = 0; i < object.length; i++) {
-        console.log(i)
-        console.log(Object.keys(object[i]))
+    function findNestedValue(nestedObject) {
+        console.log(nestedObject)
+        switch (nestedObject) {
+            case (typeof nestedObject === null):
+                break;
+            default:
+                Object.values(nestedObject).forEach(value => {
+                    switch(value) {
+                        case (typeof value === "object"):
+                            return findNestedValue(value);
+                        case (typeof value === null):
+                            break;
+                        default:
+                            newArray.push(value);
+                    }
+                })
+        }
     }
+    console.log(Object.entries(object))
 
-    console.log(Object.keys(object))
+    Object.values(object).forEach(value => {
+        if (typeof value === null) {
+            return;
+        }
+        if (typeof value === "object") {
+            // console.log(value)
+            console.log(`Sending into recurrsion`);
+            return findNestedValue(value);
+        } else if (typeof value === null || typeof value === undefined) {
+            console.log("null value found")
+            return;
+        } else {
+            console.log(`We have found the string value: "${value}"`)
+            newArray.push(value)
+        }
+    });
 
+
+    console.log(newArray)
+    return newArray;
 
 
 };
 
-listToArray(objectOne)
+console.log(listToArray(objectOne));
