@@ -150,17 +150,31 @@ let objectOne = arrayToList(set)
 // if there is an object recurse it
 // push values into corresponding keysArray
 function listToArray(object, array) {
-
     let newArray = []
-
+    // error if null value appears before all data has been captured
     function findNestedValue(nestedObject) {
-        console.log(nestedObject)
-        switch (nestedObject) {
+        if (typeof nestedObject === "string") {
+            // console.log(typeof nestedObject)
+            newArray.push(nestedObject)
+            // console.log("our parameter is string")
+        } else if (typeof nestedObject === "object") {
+            // console.log("our parameter is an object", nestedObject)
+            Object.entries(nestedObject).forEach(pair => {
+                if (pair[1] === null) {
+                    // console.log("value is null")
+                    return;
+                }
+
+                findNestedValue(pair[1])
+                // console.log(pair, "inside our recurse, we are getting deeper")
+            })
+        }
+        switch (nestedObject[1]) {
             case (typeof nestedObject === null):
                 break;
-            default:
+            case (typeof nestedObject === "object"):
                 Object.values(nestedObject).forEach(value => {
-                    switch(value) {
+                    switch (value) {
                         case (typeof value === "object"):
                             return findNestedValue(value);
                         case (typeof value === null):
@@ -171,30 +185,19 @@ function listToArray(object, array) {
                 })
         }
     }
-    console.log(Object.entries(object))
-
-    Object.values(object).forEach(value => {
-        if (typeof value === null) {
-            return;
-        }
-        if (typeof value === "object") {
-            // console.log(value)
-            console.log(`Sending into recurrsion`);
-            return findNestedValue(value);
-        } else if (typeof value === null || typeof value === undefined) {
-            console.log("null value found")
-            return;
-        } else {
-            console.log(`We have found the string value: "${value}"`)
-            newArray.push(value)
+    Object.entries(object).forEach(pair => {
+        switch (typeof pair[1]) {
+            case (null):
+                break;
+            case ("object"):
+                // console.log('object CALL recurse');
+                return findNestedValue(pair[1])
+            case ("string"):
+                // console.log("string")
+                newArray.push(pair[1])
         }
     });
-
-
-    console.log(newArray)
     return newArray;
-
-
 };
 
 console.log(listToArray(objectOne));
