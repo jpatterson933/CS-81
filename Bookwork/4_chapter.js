@@ -145,59 +145,59 @@ function arrayToList(array, object) {
 // console.log(arrayToList([1, 2, 3]));
 
 let set = ["table", "chairs", "rug"]
+let numberSet = [1, 2, 3, 4, 5, 6, 7]
 let objectOne = arrayToList(set)
-// create new arrays with whatever the keys are
-// if there is an object recurse it
-// push values into corresponding keysArray
-function listToArray(object, array) {
+// console.log(arrayToList(numberSet))
+let objectTwo = arrayToList(numberSet)
+
+// function that will turn objects into arrays
+function listToArray(object) {
+    
+    // set up an empty array variable to push in new items
     let newArray = []
-    // error if null value appears before all data has been captured
-    function findNestedValue(nestedObject) {
-        if (typeof nestedObject === "string") {
-            // console.log(typeof nestedObject)
-            newArray.push(nestedObject)
-            // console.log("our parameter is string")
-        } else if (typeof nestedObject === "object") {
-            // console.log("our parameter is an object", nestedObject)
-            Object.entries(nestedObject).forEach(pair => {
+    // inner recursive function that will dive into any key that has a nested object
+    function findNestedValue(nestedEntry) {
+        // check to see if nestedEntry is string
+        if (typeof nestedEntry === "string" || typeof nestedEntry === "number") {
+            // if returns as string, will get pushed into array
+            newArray.push(nestedEntry)
+            // check to see if nestedEntry is an object
+        } else if (typeof nestedEntry === "object") {
+            // if returns as an object, will be broken down into 
+            Object.entries(nestedEntry).forEach(pair => {
+                // checks to see if the value of the entry is null
                 if (pair[1] === null) {
-                    // console.log("value is null")
+                    // if it is null, it will return us back to wher ethe function was called
                     return;
                 }
-
+                // if the value of the key in the entry is not null, it will recurse back and rerun this function
                 findNestedValue(pair[1])
-                // console.log(pair, "inside our recurse, we are getting deeper")
-            })
-        }
-        switch (nestedObject[1]) {
-            case (typeof nestedObject === null):
-                break;
-            case (typeof nestedObject === "object"):
-                Object.values(nestedObject).forEach(value => {
-                    switch (value) {
-                        case (typeof value === "object"):
-                            return findNestedValue(value);
-                        case (typeof value === null):
-                            break;
-                        default:
-                            newArray.push(value);
-                    }
-                })
-        }
-    }
+            });
+        };
+    };
+
+    // call Object method entries to check the key value pairs of each item passed into the function
     Object.entries(object).forEach(pair => {
+        // console.log(typeof pair[1])
+        // swithc statement that checks the typeof value that is in the key value pair
         switch (typeof pair[1]) {
+            // if the value is null it will break out of the statement
             case (null):
                 break;
+            // if the value is an object, it will run the recursive function findNestedValue() withe the value as the parameter
             case ("object"):
-                // console.log('object CALL recurse');
                 return findNestedValue(pair[1])
+            // if the value type is string, it will push it into our new array
             case ("string"):
-                // console.log("string")
+                // push value of key value pair into newArray
+                newArray.push(pair[1])
+            case ("number"):
                 newArray.push(pair[1])
         }
+        // forEach will go through all key value pairs until there are none left or it breaks out due to null value
     });
     return newArray;
 };
-
-console.log(listToArray(objectOne));
+// call our listToArray() function
+// console.log(listToArray(objectOne));
+console.log(listToArray(objectTwo))
