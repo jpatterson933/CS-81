@@ -112,7 +112,7 @@ function reverseArrayInPlace(array) {
 /*
     1. write a function arrayToList that build up a list structure like the one shown when given [1, 2, 3] as argument.
     2. write a listToArray function that produces an array from a list. 
-    Then, add a helper function prepend(), which takes an element and a list and creates a new list that adds the element fo the front of the input list
+    3. Then, add a helper function prepend(), which takes an element and a list and creates a new list that adds the element to the front of the input list
     write a function nth, which takes a list and a number and returns the element at the given position in the list (with zero referring to the first element) or undefined when there is no such element
     If you have not already, also write a recursive version of nth    
 */
@@ -152,7 +152,7 @@ let objectTwo = arrayToList(numberSet)
 
 // function that will turn objects into arrays
 function listToArray(object) {
-    
+
     // set up an empty array variable to push in new items
     let newArray = []
     // inner recursive function that will dive into any key that has a nested object
@@ -201,3 +201,16 @@ function listToArray(object) {
 // call our listToArray() function
 // console.log(listToArray(objectOne));
 console.log(listToArray(objectTwo))
+
+/*
+    3. Then, add a helper function prepend(), which takes an element and a list and creates a new list
+     that adds the element to the front of the input list
+*/
+let prependThisList = ["one", "two", "something", "to", "do"]
+console.log(prependThisList)
+function prepend(list, newItem) {
+    list.unshift(newItem)
+    return list;
+};
+
+console.log(prepend(prependThisList, "something drastic"))
