@@ -1,0 +1,930 @@
+[
+ {
+   "date": "8/9/22",
+   "inv_num": "16470770",
+   "ven": "RNDC (Young's Market)",
+   "amt": "$7,836.47",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/12/22",
+   "inv_num": "16493834",
+   "ven": "RNDC (Young's Market)",
+   "amt": "$1,083.08",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/12/22",
+   "inv_num": "16500153",
+   "ven": "RNDC (Young's Market)",
+   "amt": "$261.92",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/16/22",
+   "inv_num": "16504877",
+   "ven": "RNDC (Young's Market)",
+   "amt": "$2,417.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/27/22",
+   "inv_num": "16430939",
+   "ven": "RNDC (Young's Market)",
+   "amt": "$58.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/23/22",
+   "inv_num": "3760.46",
+   "ven": "RNDC (Young's Market)",
+   "amt": "$3,520.26",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/30/22",
+   "inv_num": "116573327",
+   "ven": "RNDC (Young's Market)",
+   "amt": "$2,420.66",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/8/22",
+   "inv_num": "2441651",
+   "ven": "Natures Produce",
+   "amt": "$594.20",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/9/22",
+   "inv_num": "2442393",
+   "ven": "Natures Produce",
+   "amt": "$426.50",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/10/22",
+   "inv_num": "2443187",
+   "ven": "Natures Produce",
+   "amt": "$604.20",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/11/22",
+   "inv_num": "2443997",
+   "ven": "Natures Produce",
+   "amt": "$593.35",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/12/22",
+   "inv_num": "2444880",
+   "ven": "Natures Produce",
+   "amt": "$712.50",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/14/22",
+   "inv_num": "2445418",
+   "ven": "Natures Produce",
+   "amt": "$695.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/14/22",
+   "inv_num": "2445701",
+   "ven": "Natures Produce",
+   "amt": "$383.45",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/15/22",
+   "inv_num": "2446484",
+   "ven": "Natures Produce",
+   "amt": "$387.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/16/22",
+   "inv_num": "2447243",
+   "ven": "Natures Produce",
+   "amt": "$469.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/17/22",
+   "inv_num": "2447983",
+   "ven": "Natures Produce",
+   "amt": "$528.65",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/18/22",
+   "inv_num": "2448804",
+   "ven": "Natures Produce",
+   "amt": "$602.45",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/19/22",
+   "inv_num": "2449683",
+   "ven": "Natures Produce",
+   "amt": "$652.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/19/22",
+   "inv_num": "2449684",
+   "ven": "Natures Produce",
+   "amt": "$237.40",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/21/22",
+   "inv_num": "2450199",
+   "ven": "Natures Produce",
+   "amt": "$417.95",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/21/22",
+   "inv_num": "2450203",
+   "ven": "Natures Produce",
+   "amt": "$39.60",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/21/22",
+   "inv_num": "2450550",
+   "ven": "Natures Produce",
+   "amt": "$354.85",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/23/22",
+   "inv_num": "2452219",
+   "ven": "Natures Produce",
+   "amt": "$432.65",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/21/22",
+   "inv_num": "2451367",
+   "ven": "Natures Produce",
+   "amt": "$595.55",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/24/22",
+   "inv_num": "2452828",
+   "ven": "Natures Produce",
+   "amt": "$568.05",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/25/22",
+   "inv_num": "2453709",
+   "ven": "Natures Produce",
+   "amt": "$567.25",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/26/22",
+   "inv_num": "2454568",
+   "ven": "Natures Produce",
+   "amt": "$462.85",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/28/22",
+   "inv_num": "2455090",
+   "ven": "Natures Produce",
+   "amt": "$438.40",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/28/22",
+   "inv_num": "2455494",
+   "ven": "Natures Produce",
+   "amt": "$464.40",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "9/1/22",
+   "inv_num": "2458490",
+   "ven": "Natures Produce",
+   "amt": "$456.15",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/29/22",
+   "inv_num": "2456365",
+   "ven": "Natures Produce",
+   "amt": "$519.90",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/31/22",
+   "inv_num": "2457802",
+   "ven": "Natures Produce",
+   "amt": "$323.60",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/30/22",
+   "inv_num": "2457004",
+   "ven": "Natures Produce",
+   "amt": "$538.60",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "9/2/22",
+   "inv_num": "2459255",
+   "ven": "Natures Produce",
+   "amt": "$586.75",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "9/4/22",
+   "inv_num": "2460046",
+   "ven": "Natures Produce",
+   "amt": "$764.35",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/10/22",
+   "inv_num": "59397706",
+   "ven": "Chef's Warehouse",
+   "amt": "$178.99",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/15/22",
+   "inv_num": "59421907",
+   "ven": "Chef's Warehouse",
+   "amt": "$196.85",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/20/22",
+   "inv_num": "59450175",
+   "ven": "Chef's Warehouse",
+   "amt": "$119.88",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/9/22",
+   "inv_num": "1847241",
+   "ven": "Southern",
+   "amt": "$8,875.63",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/9/22",
+   "inv_num": "1847242",
+   "ven": "Southern",
+   "amt": "$1,869.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/9/22",
+   "inv_num": "1847243",
+   "ven": "Southern",
+   "amt": "$6,303.24",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/12/22",
+   "inv_num": "1858180",
+   "ven": "Southern",
+   "amt": "$623.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/12/22",
+   "inv_num": "1854931",
+   "ven": "Southern",
+   "amt": "$425.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/12/22",
+   "inv_num": "1854932",
+   "ven": "Southern",
+   "amt": "$420.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/23/22",
+   "inv_num": "1877588",
+   "ven": "Southern",
+   "amt": "$690.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/23/22",
+   "inv_num": "1977587",
+   "ven": "Southern",
+   "amt": "$5,895.48",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/16/22",
+   "inv_num": "1862429",
+   "ven": "Southern",
+   "amt": "$5,465.87",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/16/22",
+   "inv_num": "1862428",
+   "ven": "Southern",
+   "amt": "$695.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/19/22",
+   "inv_num": "1873619",
+   "ven": "Southern",
+   "amt": "$774.33",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/30/22",
+   "inv_num": "1892160",
+   "ven": "Southern",
+   "amt": "$4,707.75",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/30/22",
+   "inv_num": "1892162",
+   "ven": "Southern",
+   "amt": "$2,468.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/30/22",
+   "inv_num": "1892161",
+   "ven": "Southern",
+   "amt": "$1,483.75",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/9/22",
+   "inv_num": "24402081",
+   "ven": "Wine Warehouse",
+   "amt": "$3,809.46",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/16/22",
+   "inv_num": "24408021",
+   "ven": "Wine Warehouse",
+   "amt": "$495.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8.23.2022",
+   "inv_num": "24414005",
+   "ven": "Wine Warehouse",
+   "amt": "$336.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/30/22",
+   "inv_num": "24420424",
+   "ven": "Wine Warehouse",
+   "amt": "$900.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "9/2/22",
+   "inv_num": "24425017",
+   "ven": "Wine Warehouse",
+   "amt": "$96.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/9/22",
+   "inv_num": "20025",
+   "ven": "Nosotros (Park Street)",
+   "amt": "$104.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/9/22",
+   "inv_num": "27925",
+   "ven": "Nosotros (Park Street)",
+   "amt": "$2,832.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8.23.2022",
+   "inv_num": "28093",
+   "ven": "Nosotros (Park Street)",
+   "amt": "$2,064.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/16/22",
+   "inv_num": "28027",
+   "ven": "Nosotros (Park Street)",
+   "amt": "$2,064.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/30/22",
+   "inv_num": "28218",
+   "ven": "Nosotros (Park Street)",
+   "amt": "$1,776.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/9/22",
+   "inv_num": "108906",
+   "ven": "Skurnik",
+   "amt": "$1,036.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/23/22",
+   "inv_num": "110023",
+   "ven": "Skurnik",
+   "amt": "$644.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/16/22",
+   "inv_num": "109463",
+   "ven": "Skurnik",
+   "amt": "$368.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/30/22",
+   "inv_num": "110700",
+   "ven": "Skurnik",
+   "amt": "$368.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/9/22",
+   "inv_num": "390774",
+   "ven": "Winebow (Henry Wine Group)",
+   "amt": "$593.46",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/16/22",
+   "inv_num": "310266",
+   "ven": "Winebow (Henry Wine Group)",
+   "amt": "$298.98",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/23/22",
+   "inv_num": "310728",
+   "ven": "Winebow (Henry Wine Group)",
+   "amt": "$446.22",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/30/22",
+   "inv_num": "311159",
+   "ven": "Winebow (Henry Wine Group)",
+   "amt": "$298.98",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/9/22",
+   "inv_num": "15817",
+   "ven": "West Coast Ice",
+   "amt": "$555.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8.23.2022",
+   "inv_num": "15919",
+   "ven": "West Coast Ice",
+   "amt": "$599.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/16/22",
+   "inv_num": "15870",
+   "ven": "West Coast Ice",
+   "amt": "$533.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/30/22",
+   "inv_num": "15976",
+   "ven": "West Coast Ice",
+   "amt": "$533.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/10/22",
+   "inv_num": "607765",
+   "ven": "Beauchamp",
+   "amt": "$134.00",
+   "from": "N_D",
+   "code": 5111
+ },
+ {
+   "date": "8/13/22",
+   "inv_num": "608859",
+   "ven": "Beauchamp",
+   "amt": "$198.00",
+   "from": "N_D",
+   "code": 5111
+ },
+ {
+   "date": "8/27/22",
+   "inv_num": "838761",
+   "ven": "Beauchamp",
+   "amt": "$338.00",
+   "from": "N_D",
+   "code": 5111
+ },
+ {
+   "date": "8/17/22",
+   "inv_num": "609654",
+   "ven": "Beauchamp",
+   "amt": "$338.00",
+   "from": "N_D",
+   "code": 5111
+ },
+ {
+   "date": "8/30/22",
+   "inv_num": "612691",
+   "ven": "Beauchamp",
+   "amt": "$398.00",
+   "from": "N_D",
+   "code": 5111
+ },
+ {
+   "date": "8/9/22",
+   "inv_num": "24402081",
+   "ven": "Wine Warehouse",
+   "amt": "$615.00",
+   "from": "N_D",
+   "code": 5111
+ },
+ {
+   "date": "8.23.2022",
+   "inv_num": "24414005",
+   "ven": "Wine Warehouse",
+   "amt": "$410.00",
+   "from": "N_D",
+   "code": 5111
+ },
+ {
+   "date": "8/17/22",
+   "inv_num": "24409291",
+   "ven": "Wine Warehouse",
+   "amt": "$205.00",
+   "from": "N_D",
+   "code": 5111
+ },
+ {
+   "date": "8/30/22",
+   "inv_num": "24420424",
+   "ven": "Wine Warehouse",
+   "amt": "$615.00",
+   "from": "N_D",
+   "code": 5111
+ },
+ {
+   "date": "9/2/22",
+   "inv_num": "24425017",
+   "ven": "Wine Warehouse",
+   "amt": "$205.00",
+   "from": "N_D",
+   "code": 5111
+ },
+ {
+   "date": "8/30/22",
+   "inv_num": "1892160",
+   "ven": "Nature's Produce",
+   "amt": "$75.40",
+   "from": "N_D",
+   "code": 5125
+ },
+ {
+   "date": "8/16/22",
+   "inv_num": "1862429",
+   "ven": "Pepsi",
+   "amt": "$73.00",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/17/22",
+   "inv_num": "538815",
+   "ven": "Pepsi",
+   "amt": "$92.50",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/29/22",
+   "inv_num": "544816",
+   "ven": "Pepsi",
+   "amt": "$92.50",
+   "from": "N_D",
+   "code": 5115
+ },
+ {
+   "date": "8/11/22",
+   "inv_num": "SO23934",
+   "ven": "Partners Coffee",
+   "amt": "$541.08",
+   "from": "N_D",
+   "code": 5125
+ },
+ {
+   "date": "8/26/22",
+   "inv_num": "25697",
+   "ven": "Partners Coffee",
+   "amt": "$541.08",
+   "from": "N_D",
+   "code": 5125
+ },
+ {
+   "date": "8/19/22",
+   "inv_num": "24828",
+   "ven": "Partners Coffee",
+   "amt": "$541.08",
+   "from": "N_D",
+   "code": 5125
+ },
+ {
+   "date": "8/22/22",
+   "inv_num": "04493",
+   "ven": "Partners Coffee",
+   "amt": "$541.08",
+   "from": "N_D",
+   "code": 5125
+ },
+ {
+   "date": "8/30/22",
+   "inv_num": "26210",
+   "ven": "Partners Coffee",
+   "amt": "$541.08",
+   "from": "N_D",
+   "code": 5125
+ },
+ {
+   "date": "9/1/22",
+   "inv_num": "26536",
+   "ven": "Partners Coffee",
+   "amt": "$541.08",
+   "from": "N_D",
+   "code": 5125
+ },
+ {
+   "date": "8/8/22",
+   "inv_num": "59383904",
+   "ven": "Chef's Warehouse",
+   "amt": "$342.14",
+   "from": "N_D",
+   "code": 5125
+ },
+ {
+   "date": "8/22/22",
+   "inv_num": "59500875",
+   "ven": "Chef's Warehouse",
+   "amt": "$282.61",
+   "from": "N_D",
+   "code": 5125
+ },
+ {
+   "date": "8/17/22",
+   "inv_num": "59434975",
+   "ven": "Chef's Warehouse",
+   "amt": "$201.30",
+   "from": "N_D",
+   "code": 5125
+ },
+ {
+   "date": "8/31/22",
+   "inv_num": "59757395",
+   "ven": "Chef's Warehouse",
+   "amt": "$425.44",
+   "from": "N_D",
+   "code": 5125
+ },
+ {
+   "date": "8/12/22",
+   "inv_num": "114-8716398-5744232",
+   "ven": "Amazon",
+   "amt": "$31.58",
+   "from": "N_D",
+   "code": 7075
+ },
+ {
+   "date": "8/12/22",
+   "inv_num": "114-0158072-3691445",
+   "ven": "Amazon",
+   "amt": "$47.40",
+   "from": "N_D",
+   "code": 7075
+ },
+ {
+   "date": "8/12/22",
+   "inv_num": "114-9944781-5536230",
+   "ven": "Amazon",
+   "amt": "$145.09",
+   "from": "N_D",
+   "code": 7075
+ },
+ {
+   "date": "8/26/22",
+   "inv_num": "113-9866662-2555412",
+   "ven": "Amazon",
+   "amt": "$13.99",
+   "from": "N_D",
+   "code": 7075
+ },
+ {
+   "date": "8/24/22",
+   "inv_num": "H5CP7LWR0",
+   "ven": "Bar Products",
+   "amt": "$39.01",
+   "from": "N_D",
+   "code": 7075
+ },
+ {
+   "date": "9/2/22",
+   "inv_num": "100211255",
+   "ven": "Bar Products",
+   "amt": "$116.93",
+   "from": "N_D",
+   "code": 7075
+ },
+ {
+   "date": "8.8.22",
+   "inv_num": "2485408",
+   "ven": "Trimark",
+   "amt": "$457.30",
+   "from": "N_D",
+   "code": 7075
+ },
+ {
+   "date": "8/13/22",
+   "inv_num": "77652731",
+   "ven": "Webstaurant",
+   "amt": "$306.84",
+   "from": "N_D",
+   "code": 7075
+ },
+ {
+   "date": "8/27/22",
+   "inv_num": "78080857",
+   "ven": "Webstaurant",
+   "amt": "$379.87",
+   "from": "N_D",
+   "code": 7075
+ },
+ {
+   "date": "8/19/22",
+   "inv_num": "77830147",
+   "ven": "Webstaurant",
+   "amt": "$983.07",
+   "from": "N_D",
+   "code": 7075
+ },
+ {
+   "date": "8/16/22",
+   "inv_num": "77757385",
+   "ven": "Webstaurant",
+   "amt": "$154.42",
+   "from": "N_D",
+   "code": 7075
+ },
+ {
+   "date": "8/29/22",
+   "inv_num": "78149554",
+   "ven": "Webstaurant",
+   "amt": "$2,237.06",
+   "from": "N_D",
+   "code": 7075
+ },
+ {
+   "date": "9/2/22",
+   "inv_num": "78282655",
+   "ven": "Webstaurant",
+   "amt": "$1,645.34",
+   "from": "N_D",
+   "code": 7075
+ },
+ {
+   "date": "8/12/22",
+   "inv_num": "100210202",
+   "ven": "Cocktail Kingdom",
+   "amt": "$83.12",
+   "from": "N_D",
+   "code": 7075
+ },
+ {
+   "date": "8/24/22",
+   "inv_num": "100284041",
+   "ven": "Cocktail Kingdom",
+   "amt": "$281.99",
+   "from": "N_D",
+   "code": 7075
+ },
+ {
+   "date": "8/17/22",
+   "inv_num": "538815",
+   "ven": "Pepsi",
+   "amt": "$92.50",
+   "from": "N_D",
+   "code": 7075
+ },
+ {
+   "date": "8/29/22",
+   "inv_num": "544816",
+   "ven": "Pepsi",
+   "amt": "$92.50",
+   "from": "N_D",
+   "code": 7075
+ }
+]
