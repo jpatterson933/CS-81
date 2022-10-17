@@ -142,7 +142,7 @@ function arrayToList(array, object) {
     }
 };
 
-// console.log(arrayToList([1, 2, 3]));
+console.log(arrayToList([1, 2, 3]));
 
 let set = ["table", "chairs", "rug"]
 let numberSet = [1, 2, 3, 4, 5, 6, 7]
@@ -221,12 +221,26 @@ console.log(prepend(shortList, "something drastic"));
     when there is no such element
 */
 
+let newList = ["one", "two", "three"]
+
 function nth(list, num, element) {
     // list parameter
     // num is where we want the element to go
     // where to insert
-    console.log(list, num, element)
+    console.log(list, num, element);
+
+    if(element) {
+        list.splice(num, 0, element)
+
+    } else if (element === undefined) {
+        list.splice(num, 0, undefined)
+        return list;
+    }
+
+
+    return list;
 
 };
 
-nth(shortList, 0, "some element");
+// console.log(nth(newList, 0, "some element"));
+console.log(nth(newList, 0));
