@@ -1,4 +1,11 @@
-var dataSet = [
+/*
+    Jeffery W. Patterson
+    CS 81
+    Assignment 5
+*/
+
+// our data set that we will be using for this assignment
+let dataSet = [
     {
         "name": "Maura Glass",
         "age": 60,
@@ -188,4 +195,52 @@ var dataSet = [
         "english": 50,
         "yearsOfEducation": 5
     }
-]
+];
+
+//find average - parameter is an array of objects
+function average(array) {
+    // using reduce, we grab the array parameter and then take the previous value and add it to the next value and 
+    // then the set the previous value as the two values added and repeat until reduce has gone through the entire array
+    // then I devide that by the array.length to get an average
+    return array.reduce((previousValue, nextValue) => previousValue + nextValue) / array.length;
+};
+// grab the first name with the paratmer being the full name
+function getFirstName(fullName) {
+    // assuming the name format is consisten "firstName lastName", then I can split them at the space 
+    // " " and grab the first name in index spot [0]
+    return fullName.split(" ")[0];
+};
+// paramter is the array, the average age, the average english grade, and a start which will normall be an empty array []
+function findStudents(array, ageAvg, engAvg, start) {
+    // set filteredDataset to start parameter
+    let filteredDataSet = start;
+    // loop through the array
+    for (let data of array) {
+        // here we say if the data.age is less than the average age and the data.english is greater than the average english grade, we will execute the command inside
+        if (data.age < ageAvg && data.english > engAvg) {
+            // here we push a new object into our filtered Data set with the first name, the age and the english grade
+            filteredDataSet.push({
+                "name": getFirstName(data.name),
+                "age": data.age,
+                "english": data.english
+            });
+        };
+    };
+    return filteredDataSet;
+};
+// our function to print to console with the paramter being the array
+function printToConsole(array) {
+    for (let each of array) {
+        console.log(`${each.name} is ${each.age} years old and has an above average English grade of ${each.english}`)
+    };
+};
+
+function printYoungEnglishStars() {
+    let averageAge = (Math.round(average(dataSet.map(d => d.age))));
+    let averageEng = (Math.round(average(dataSet.map(d => d.english))));
+    let newDataSet = findStudents(dataSet, averageAge, averageEng, []);
+
+    return printToConsole(newDataSet);
+};
+
+printYoungEnglishStars();
