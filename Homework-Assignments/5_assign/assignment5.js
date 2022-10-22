@@ -199,48 +199,54 @@ let dataSet = [
 
 //find average - parameter is an array of objects
 function average(array) {
-    // using reduce, we grab the array parameter and then take the previous value and add it to the next value and 
-    // then the set the previous value as the two values added and repeat until reduce has gone through the entire array
-    // then I devide that by the array.length to get an average
+    /*
+        Here we are using a higher order function reduce on our array parameter
+        we are using two parameters in our reduce function - using an e6 arrow function
+        our first paramter is going to be the previousValue in our array - however when it starts, 
+        reduce will use the FIRST value and our second parameter is going to be our next value
+        then the fucntion will add the next value to our previous value until it goes through the 
+        whole function and then divide by the length of the array
+    */
     return array.reduce((previousValue, nextValue) => previousValue + nextValue) / array.length;
 };
-// grab the first name with the paratmer being the full name
+// funciton with paramter a full name
 function getFirstName(fullName) {
-    // assuming the name format is consisten "firstName lastName", then I can split them at the space 
-    // " " and grab the first name in index spot [0]
+    // assuming the name format is consistent with "firstName lastName", then I can split them at the space 
+    // " " and grab the first name in index spot [0] 
     return fullName.split(" ")[0];
 };
-// paramter is the array, the average age, the average english grade, and a start which will normall be an empty array []
-function findStudents(array, ageAvg, engAvg, start) {
-    // set filteredDataset to start parameter
-    let filteredDataSet = start;
-    // loop through the array
-    for (let data of array) {
-        // here we say if the data.age is less than the average age and the data.english is greater than the average english grade, we will execute the command inside
-        if (data.age < ageAvg && data.english > engAvg) {
-            // here we push a new object into our filtered Data set with the first name, the age and the english grade
-            filteredDataSet.push({
-                "name": getFirstName(data.name),
-                "age": data.age,
-                "english": data.english
-            });
-        };
-    };
-    return filteredDataSet;
+// function to filter out students with array, average age and average english grade parameters
+function filterStudents(array, ageAvg, engAvg) {
+    // return our filtered data -> 
+    return filteredData = array.filter(data => {
+        // only return the data if age is less than average age AND english grade is greater than average english grade
+        return data.age < ageAvg && data.english > engAvg;
+    });
 };
 // our function to print to console with the paramter being the array
 function printToConsole(array) {
+    // for loop that will print in the console the name, age and english grade in our array using template literals
     for (let each of array) {
-        console.log(`${each.name} is ${each.age} years old and has an above average English grade of ${each.english}`)
+        // call our getFirstName function
+        console.log(`${getFirstName(each.name)} is ${each.age} years old and has an above average English grade of ${each.english}`)
     };
 };
 
+// our function to combine the above and print out our the young english starts
 function printYoungEnglishStars() {
+    /*
+        set average age to the following
+        first we use map to create a new array with only the ages or only the english grades
+        then, the average function will use reduce to creat an average
+        then we will use Math.round() to round that number to a whole number
+        then, that will be set to a variable average age or average english
+    */
     let averageAge = (Math.round(average(dataSet.map(d => d.age))));
     let averageEng = (Math.round(average(dataSet.map(d => d.english))));
-    let newDataSet = findStudents(dataSet, averageAge, averageEng, []);
-
+    // here we call filterStudents() with our main array dataSet and our two created average variables
+    let newDataSet = filterStudents(dataSet, averageAge, averageEng);
+    // we plug in our new data set as the array we have filtered and it will print out to the console
     return printToConsole(newDataSet);
 };
-
+// call our main function to print out young all starts to the console
 printYoungEnglishStars();
