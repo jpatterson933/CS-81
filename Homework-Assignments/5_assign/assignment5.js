@@ -235,11 +235,10 @@ function printToConsole(array) {
 // our function to combine the above and print out our the young english starts
 function printYoungEnglishStars() {
     /*
-        set average age to the following
         first we use map to create a new array with only the ages or only the english grades
-        then, the average function will use reduce to creat an average
+        then, the average function will use reduce to create an average from the newly mapped array
         then we will use Math.round() to round that number to a whole number
-        then, that will be set to a variable average age or average english
+        then, we will set that to a varialbe to be used in the filterStudents()
     */
     let averageAge = (Math.round(average(dataSet.map(d => d.age))));
     let averageEng = (Math.round(average(dataSet.map(d => d.english))));
