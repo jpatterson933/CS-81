@@ -150,7 +150,7 @@ let objectOne = arrayToList(set)
 // console.log(arrayToList(numberSet))
 let objectTwo = arrayToList(numberSet)
 
-// function that will turn objects into arrays
+// function that will turn objects into arrayss
 function listToArray(object) {
 
     // set up an empty array variable to push in new items

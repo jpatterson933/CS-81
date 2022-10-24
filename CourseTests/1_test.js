@@ -1,265 +1,278 @@
 /*
-Instructions
-The content we have covered so far have provided a great foundation for problem-solving exercises in the JavaScript programming language. For this reason, a large part of this test will require you to integrate the knowledge you have learned so far in order to write simple to more complex programs for answers.
+    Jeffery W. Patterson
+    CS 81
+    TEST 1
+*/
 
-Test 1 questions can be found below on this page.
-Test 1 will consist of coding and multiple choice questions that covers material from Chapter 1 up until, but not including, this week. You may use any resources you have used thus far in the course, but I ask that you avoid blatantly copying complete code from online resources for the answers.
-This is a take-home test format, so the Test 1 questions will be available throughout the test period. You will only be able to submit the test any time during the test period: 10/19 12 am to 10/23 11:59 pm.
-Please submit your assignment on this page below in one JavaScript file (.js). You can put your multiple choice answers above between comments.
-NO LATE SUBMISSIONS WILL BE ACCEPTED.
-Tip: If in the end you cannot get your solution to work the way you want, please just submit what you have done so far. I will be scoring based on progress and partial work from your submission for this test.
-Submission Format
-As mentioned above, please put all your answers in one javascript file (put the MC and short answer questions in comments).
-Good luck!
-
-_________________________________
-
- 
-
-Test 1
- 
-
+/*
 Multiple Choice 1
-
 Which of the following statements is true about the difference between while looping and do..while looping?
 
-a) while loops require if condition statements to run
-
-b) only while loops require a condition
-
-c) while loops must use a global variable
-
+ANSWER
 d) do while loops ensure that the body executes at least once
+*/
 
-
-Multiple Choice 2
-
-Observe the following switch statement closely:
-
-switch (prompt("What is your mood today?")) {
-  case "happy!":
-    console.log("Yay!");
-    break;
-  case "Sad".toLowerCase():
-    console.log("Don't be sad...");
-  case "upset":
-    console.log("Get glad!");
-    break;
-  case "UNKNOWN":
-    console.log("How do you not know?");
-  default:
-    console.log("Are you human?");
-    break;
-}
- 
-
+/*
 MC 2a
-
 If input is "happy!", then output is:
 
-a)
+ANSWER
+a)"Yay!"
 
-"Yay!"
-
-b)
-
-"How do you not know?"
-"Are you human?"
-
-c) 
-
-"Are you not human?"
-
-d)
-
-"Get glad!"
-
- 
-
-MC 2b
-
+MC b
 If input is "Sad", then output is:
 
-a)
-
-"Get glad!"
-
-b)
-
-"Don't be sad..."
-
-"Get glad!"
-
-c)
-
-"Are you human?"
-
-d)
-
-None of the above
-
- 
+ANSWER
+c)"Are you human?"
 
 MC 2c
-
 If the input is "UNKNOWN", then the output is:
+a)"How do you not know?"
 
-a)
-
-"How do you not know?"
+ANSWER
 "Are you human?"
-b)
+*/
 
-"How do you not know?"
 
-c)
-
-"Are you human?"
-
-d)
-
-None of the above
-
- 
-
+/*
 Short Answer 1 (12 pts)
 
-Write out the call stack order for this program if x is 4.
+ANSWER
+CALL STACK FOR ABOVE
+not in function
+    in factorial(4); return 4 * factorial(4 - 1)
+        in factorial(3); return 3 * facotrial(3 - 1)
+            in factorial(2); return 2 * factorial(2 - 1)
+                in factorial(1); return 1 * factorial(1 - 1)
+                    in factorial(0);
+                        in if statement (0 === 0); return 1;
+                in factorial(1); return 1 * 1
+            in factorial(2); return 2 * 1
+        in factorial(3); return 3 * 2
+    in factorial(4); return 4 * 6
+not in function
+*/
 
-function factorial(x) { 
-  if (x === 0) {
-    return 1;
-  }
-  return x * factorial(x-1); 
-}
-
-console.log(factorial(x));
-Use "not in function" if not in a function, and put the function name along with the arguments if in a function.
-
-Hint: Use the textbook exampleLinks to an external site. as a guide. An example solution would look something like:
-
-Not in function
-in function_name(arg, ...)
-...
-Not in function
-To be clear, you are not writing code, but simply describing in a list each function call (list functions with their parameters only, except the “not in function” at the beginning and end of your call stack list) that happens during the execution of the recursive function.
-
+/*
 Short Answer 2 - Loops (12 pts)
 
-What is the value of y after the following pseudo-code program executes?
+ANSWER -> 5
+*/
 
-given a variable "y" set to 0
-for each number from inclusively 1 to 10:
-  if the number is even, then
-    increment "y" by 4
-  otherwise
-    decrement "y" by 3
- 
-
+/*
 Problem 1 - Find The Difference (20 pts)
 
-Given an array of integers, write a program to find the difference between the sum all the even numbers in the array and sum of all odd numbers in the array. You can subtract the sums in whatever order you wish but the function must always return a positive integer. Please complete a function called SumDiff, which takes an argument of an array of numbers and returns an integer.
+ANSWER
+*/
 
+// array to test function
+let numArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// a simplet get sum array using higher order functions - reused in another problem but named 
+function getSum(array) {
+    return array.reduce((previousValue, nextValue) => previousValue + nextValue);
+};
+
+// function to sum the difference of odd and eve numbers 
 function SumDiff(numbers) {
-    // your code here
-    // returns an integer
-}
+    // empty array for even numbers
+    let evenNumbers = [];
+    // empty array for odd numbers
+    let oddNumbers = [];
+    // for loop to fill arrays with even and odd numbers
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 === 0) {
+            evenNumbers.push(numbers[i])
+        } else {
+            oddNumbers.push(numbers[i])
+        }
+    }
+    // get sum of even or odd numbers and round to nearest number
+    let totalEvenNum = (Math.round(getSum(evenNumbers.map(num => num))));
+    let totalOddNum = (Math.round(getSum(oddNumbers.map(num => num))));
+    // use Math.abs() to subtract two numbers and return a positive value
+    return Math.abs(totalEvenNum - totalOddNum);
+};
+// print our SumDiff() to the screen
+console.log(SumDiff(numArray));
 
-Example test case:
-Input: [1,5,8,2,10,33,36]
-Output: 17
-Reasoning: (8 + 2 + 10 + 36) - (1 + 5 + 33) = 17
- 
-
+/*
 Problem 2 - Recursive Sum (30 pts)
 
-Given an JavaScript object list of books that each have a pages attribute to define the number of pages in the book, find the sum of all the pages in the object list of books using recursion (you must use recursion to solve this problem, any other methods will receive half credit).
-
-Keep in mind:
-
-The input list object may be completely empty (ex. {})
-The next attribute may not be defined
-function getPageTotal(list) {
-    // your code here
-    // returns an integer
+ANSWER
+*/
+// books with pages objects with nested book objects
+let books = {
+    "book": "A",
+    "pages": 50,
+    "next": {
+        "book": "B",
+        "pages": 25,
+        "next": null
+    }
 }
 
-Example test case:
-Input: 
-{
-  "book":"A",
-  "pages":50,
-  "next":{
-    "book":"B",
-    "pages":25,
-    "next": null
-  }
-}
+// function that will turn objects into arrayss
+function listToArray(object) {
+    // set up an empty array variable to push in new items
+    let newArray = []
+    // inner recursive function that will dive into any key that has a nested object
+    function findNestedValue(nestedEntry) {
+        // check to see if nestedEntry is string
+        if (typeof nestedEntry === "number") {
+            // if returns as string, will get pushed into array
+            newArray.push(nestedEntry)
+            // check to see if nestedEntry is an object
+        } else if (typeof nestedEntry === "object") {
+            // if returns as an object, will be broken down into 
+            Object.entries(nestedEntry).forEach(pair => {
+                // checks to see if the value of the entry is null
+                if (pair[1] === null) {
+                    // if it is null, it will return us back to wher ethe function was called
+                    return;
+                }
+                // if the value of the key in the entry is not null, it will recurse back and rerun this function
+                findNestedValue(pair[1])
+            });
+        };
+    };
 
-Output: 75
-Reasoning: 50 + 25 pages
- 
+    // call Object method entries to check the key value pairs of each item passed into the function
+    Object.entries(object).forEach(pair => {
+        // switch statement that checks the typeof value that is in the key value pair
+        switch (typeof pair[1]) {
+            // if the value is null it will break out of the statement
+            case (null):
+                break;
+            // if the value is an object, it will run the recursive function findNestedValue() withe the value as the parameter
+            case ("object"):
+                return findNestedValue(pair[1])
+            case ("number"):
+                // this will catch page numbers and push into new array
+                newArray.push(pair[1])
+        };
+    });
+    // return the new arry to where the function was called
+    return newArray;
+};
 
+// our function to calculate the sum of an array
+function calculateSum(array) {
+    return array.reduce((previousValue, nextValue) => previousValue + nextValue);
+};
+// log our sum of the created array from any book that has a page
+console.log(calculateSum(listToArray(books)));
+
+
+/*
 Problem 3 - Search the Tree (40 pts)
 
-A binary search tree is a data structure that consists of JavaScript objects called "nodes". A tree always has a root node which holds its own integer value property and can have up to two child nodes (or leaf nodes), a left and right attribute. A leaf node holds a value attribute and, likewise, a left and right attribute each potentially pointing to another node in the binary tree. Think of it as a Javascript object with potentially more sub-objects referenced by the left and right attributes (as seen in assignment 4). There are certain rules that apply to a binary tree:
+ANSWER
+*/
 
-A node's left leaf node has a value that is <= than to its own value
-A node's right leaf node has a value that is => its own value
-In other words:
-
-let node = {
-  value: <some number>
-  left: <a node object with value attribute <= this object's value>
-  right: <a node object with value attribute >= this object's value>
-}
-If you need a visual aid, below is an example of what a binary tree looks like according to the above rules:
-
-binarytree.png
-
-You will be writing a function called isMissingFromTree that takes two arguments: the root object and a value (number), and returns a boolean: false if the value is present in the tree or true if it is not present.
-
-function isMissingFromTree(root, value) {
-    // your code here
-    // return boolean
-}
-Let's translate the above image into a familiar JavaScript object below as an example:
-
-
-let tree = { 
-  "value": 100, 
-  "left": {
-    "value": 50,
+// tree object with inner left and right branches
+let tree = {
+    "value": 100,
     "left": {
-      "value": 25,
-      "left": null,
-      "right": null
+        "value": 50,
+        "left": {
+            "value": 25,
+            "left": null,
+            "right": null
+        },
+        "right": {
+            "value": 75,
+            "left": null,
+            "right": null
+        }
     },
     "right": {
-      "value": 75,
-      "left": null,
-      "right": null
+        "value": 150,
+        "left": null,
+        "right": null
     }
-  }, 
-  "right": {
-    "value": 150,
-    "left": null
-    "right": null
-  }
-}
+};
 
-console.log(isMissingFromTree(tree, 25))
+// function that checks if the root object has a value
+function isMissingFromTree(root, value) {
+    // set an empty temporary array
+    let tempArray = [];
+    // search each branch for more branchs. This is a recursive function. 
+    function searchTreeBranch(object) {
+        // if the object is null, it will return out of this function
+        if (typeof object === null) {
+            return;
+        } else {
+            // go through each key value in object and assign it to pair
+            Object.entries(object).forEach(pair => {
+                // if the value is null, we return out of this function
+                if (pair[1] === null) {
+                    return;
+                } else {
+                    // switch statement checking the key for "left" or "right"
+                    switch (pair[0]) {
+                        // if key is null, it will break out of this statement
+                        case (null):
+                            break;
+                        // key is value, it will push the value of value to the tempArray
+                        case ("value"):
+                            tempArray.push(pair[1])
+                            return;
+                        // if key is left, it will rerun our recursive function that searches branches
+                        case ("left"):
+                            return searchTreeBranch(pair[1]);
+                        // if key is right, it will rerun our recursive function that searches branches
+                        case ("right"):
+                            // left and right hold objects which is this case is pair[1]
+                            return searchTreeBranch(pair[1]);
+                    };
+                };
+            });
+        };
+    };
 
-Output: false
-Reasoning: 25 is a value of a leaf node in the binary tree so it isn't missing from it
-..
-"left": {
-  "value": 25,
-  "left": null,
-  "right": null
-},
-..
+    // our enitial Object.entries() method call to plug in the root paramater
+    Object.entries(root).forEach(pair => {
+        // switch statement to check the keys otherwise known as pair[0]
+        switch (pair[0]) {
+            // if null it will break out of this statement
+            case (null):
+                break;
+            // key is value, it will push the value of value to the tempArray
+            case ("value"):
+                tempArray.push(pair[1]);
+                break;
+            // if key is left, it will rerun our recursive function that searches branches
+            case ("left"):
+                return searchTreeBranch(pair[1]);
+            // if key is right, it will rerun our recursive function that searches branches
+            case ("right"):
+                // left and right hold objects which is this case is pair[1]
+                return searchTreeBranch(pair[1]);
+        };
+    });
+    // here we take parameter array and a plugged in value to see if the array has the plugged in value
+    function checkTreeValues(array, pluggedValue) {
+        // check the array and filter out any matches and set it to checkData
+        let checkedData = array.filter(data => {
+            return data === pluggedValue;
+        });
+        // if length is 0, there were not matches so it will return our false statement surrounded by template literals
+        switch (checkedData.length) {
+            case (0):
+                return `Output: ${false}
+                Reasoning: The value ${pluggedValue} was NOT found in the binary tree!`;
+            // if length is 1, that means there was a match so it will return our true statement surrounded by template literals
+            case (1):
+                return `Output: ${true}
+                Reasoning: The value ${pluggedValue} was found as a value in the binary tree!`;
+        };
+    };
+    // this will return out template literals that tell us whether or not our original value existed in the root
+    return checkTreeValues(tempArray, value);
+};
 
-
-
-*/
+// check different values to see if functions work properly
+console.log(isMissingFromTree(tree, 25));
+console.log(isMissingFromTree(tree, 24));
+console.log(isMissingFromTree(tree, 50));
