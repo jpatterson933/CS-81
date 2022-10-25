@@ -22,7 +22,7 @@ class Vec {
         return new Vec(x, y);
     }
 
-    get calculateHypotenuse() {
+    get findLength() {
         return (Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2)));
     }
 
@@ -33,7 +33,7 @@ let cosmo = new Vec(3, 4);
 let drank = new Vec(3, 4);
 let biggie = new Vec(22, 12);
 
-console.log(drank.calculateHypotenuse)
+console.log(drank.findLength)
 
 // console.log(cosmo)
 // console.log(cosmo.plus(drank));
