@@ -1,7 +1,7 @@
 /*
     Jeffery W. Patterson
     Week 6 Homework
-    CS 81
+    CS 81git ad
 */
 
 
@@ -20,7 +20,6 @@ class Monster {
         this.stomach = [];
         // set language
     }
-
     // takes a food_item STRING and returns everything eaten so far as an ARRAY
     eat(food_item) {
         this.stomach.push(food_item);
