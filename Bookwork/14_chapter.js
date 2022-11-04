@@ -75,41 +75,40 @@ function writeTable (object) {
 writeTable(mountains);
 
 /*
-    The document.getElementsByTagName method returns all child elements with a given tagname. Implement your own version of this as a function that takes a node and a string(the tag name) as arguments and returns an array containing all descendant element nodes with the given tag name.
+    The document.getElementsByTagName method returns all child elements with a given tagname. Implement your own version of this as a function that takes a node and a string(the tag name) as arguments and returns an array containing all descendant element nodes with the given tag name. <div> then descendants with tag name <tr>
         To find the tag name of an element, use its nodeName property. But note 
     that this will return the tag name in all uppercase. Use the toLowerCase or toUpperCase string methods to compensate for this.
 */
 
 
 function getNodes(node, string) {
+    let matchingTagNames = [];
+    console.log(document.getElementsByTagName(node))
+    console.log(document.getElementsByTagName(string))
 
     let foundNodes = document.querySelectorAll(node);
-    console.log(foundNodes)
+    // console.log(foundNodes)
 
     for(let i = 0; i < foundNodes.length; i++) {
         if(foundNodes[i].hasChildNodes){
             let deepNode = foundNodes[i].childNodes
+            console.log(deepNode)
             for(let i = 0; i < deepNode.length; i++) {
-                // if(deepNode === st)
+                if(deepNode[i].nodeName.toLowerCase() === string) {
+                    console.log("it matches")
+                    matchingTagNames.push(deepNode[i])
+                } else {
+                    console.log("nothing matches!")
+                    return;
+                }
             } 
-            console.log("test")
-            console.log(foundNodes[i].nodeName)
-            let chlNd = foundNodes[i].nodeName.toLowerCase();
-
-            console.log(chlNd)
-            if(chlNd === string) {
-                
-            }
         }
     }
 
-
-
-    console.log(document.querySelectorAll(node)[0].nodeName)
-
-    
+    console.log(matchingTagNames)
     
 };
 
 // console.log(getNodes("something", "div"))
 getNodes("tr", "td")
+getNodes("div", "tr")
