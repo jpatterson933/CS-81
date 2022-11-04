@@ -38,9 +38,46 @@ const mountains = [
 ];
 
 function writeTable (object) {
+    let mountains = document.getElementById('mountains');
+    // create a table
+    let table = document.createElement('table');
+    // append the table to the body of the document
+    mountains.append(table);
+    // create a new row
+    let newRow = document.createElement('tr');
+    table.append(newRow)
 
-    console.log(object)
+    Object.keys(object[0]).forEach(key => {
+        let newTableHeader = document.createElement('th');
+        newTableHeader.style.fontSize = "2em";
+        newRow.appendChild(newTableHeader);
+        let newContent = document.createTextNode(key);
+        newTableHeader.appendChild(newContent);
+    });
 
+    for(let i = 0; i < object.length; i++) {
+
+        let newTableRow = document.createElement('tr');
+        table.appendChild(newTableRow);
+
+        Object.values(object[i]).forEach(value => {
+
+            let newTableData = document.createElement('td');
+            newTableData.style.textAlign = "right";
+            newTableData.style.padding = "2px 2em";
+            let newValue = document.createTextNode(value);
+            newTableData.appendChild(newValue);
+            newTableRow.appendChild(newTableData)
+        })
+    }
 };
 
 writeTable(mountains);
+
+/*
+    The document.getElementsByTageName method returns all child elements with a given tage name. Implement your own version of this as a function that takes a node and a string (the tag name) as arguments and returns an array containing all descendant element nodes with the given tag name.
+        To find the tag name of an element, use its nodeName property. But note 
+    that this will return the tage name in all uppercase. Use the toLowerCase or toUpperCase string methods to compensate for this.
+*/
+
+console.log(document.getElementsByTagName('td'))
