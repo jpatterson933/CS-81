@@ -75,9 +75,41 @@ function writeTable (object) {
 writeTable(mountains);
 
 /*
-    The document.getElementsByTageName method returns all child elements with a given tage name. Implement your own version of this as a function that takes a node and a string (the tag name) as arguments and returns an array containing all descendant element nodes with the given tag name.
+    The document.getElementsByTagName method returns all child elements with a given tagname. Implement your own version of this as a function that takes a node and a string(the tag name) as arguments and returns an array containing all descendant element nodes with the given tag name.
         To find the tag name of an element, use its nodeName property. But note 
-    that this will return the tage name in all uppercase. Use the toLowerCase or toUpperCase string methods to compensate for this.
+    that this will return the tag name in all uppercase. Use the toLowerCase or toUpperCase string methods to compensate for this.
 */
 
-console.log(document.getElementsByTagName('td'))
+
+function getNodes(node, string) {
+
+    let foundNodes = document.querySelectorAll(node);
+    console.log(foundNodes)
+
+    for(let i = 0; i < foundNodes.length; i++) {
+        if(foundNodes[i].hasChildNodes){
+            let deepNode = foundNodes[i].childNodes
+            for(let i = 0; i < deepNode.length; i++) {
+                // if(deepNode === st)
+            } 
+            console.log("test")
+            console.log(foundNodes[i].nodeName)
+            let chlNd = foundNodes[i].nodeName.toLowerCase();
+
+            console.log(chlNd)
+            if(chlNd === string) {
+                
+            }
+        }
+    }
+
+
+
+    console.log(document.querySelectorAll(node)[0].nodeName)
+
+    
+    
+};
+
+// console.log(getNodes("something", "div"))
+getNodes("tr", "td")
