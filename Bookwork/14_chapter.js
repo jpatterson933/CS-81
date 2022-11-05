@@ -37,7 +37,7 @@ const mountains = [
     }
 ];
 
-function writeTable (object) {
+function writeTable(object) {
     let mountains = document.getElementById('mountains');
     // create a table
     let table = document.createElement('table');
@@ -55,7 +55,7 @@ function writeTable (object) {
         newTableHeader.appendChild(newContent);
     });
 
-    for(let i = 0; i < object.length; i++) {
+    for (let i = 0; i < object.length; i++) {
 
         let newTableRow = document.createElement('tr');
         table.appendChild(newTableRow);
@@ -82,33 +82,38 @@ writeTable(mountains);
 
 
 function getNodes(node, string) {
-    let matchingTagNames = [];
-    console.log(document.getElementsByTagName(node))
-    console.log(document.getElementsByTagName(string))
+    let captureNodes = [];
 
-    let foundNodes = document.querySelectorAll(node);
-    // console.log(foundNodes)
+    let nodeList = document.querySelectorAll(node);
 
-    for(let i = 0; i < foundNodes.length; i++) {
-        if(foundNodes[i].hasChildNodes){
-            let deepNode = foundNodes[i].childNodes
-            console.log(deepNode)
-            for(let i = 0; i < deepNode.length; i++) {
-                if(deepNode[i].nodeName.toLowerCase() === string) {
-                    console.log("it matches")
-                    matchingTagNames.push(deepNode[i])
-                } else {
-                    console.log("nothing matches!")
+    let captureTextNodes = [];
+
+    function searchForNodes(nodeList, string) {
+        if (nodeList[0].nodeName === "#text") {
+
+            captureTextNodes.push(nodeList[0])
+            return;
+        } else {
+            for (let i = 0; i < nodeList.length; i++) {
+                if (nodeList[i].nodeName === "#text") {
+                    captureTextNodes.push(nodeList[i])
                     return;
+                } else if (nodeList[i].nodeName.toLowerCase() === string) {
+
+                    captureNodes.push(nodeList[i])
+                    searchForNodes(nodeList[i].childNodes, string)
+
+                } else {
+
+                    searchForNodes(nodeList[i].childNodes, string)
                 }
-            } 
+            }
         }
     }
-
-    console.log(matchingTagNames)
-    
+    searchForNodes(nodeList, string)
+    return captureNodes;
 };
 
 // console.log(getNodes("something", "div"))
-getNodes("tr", "td")
-getNodes("div", "tr")
+console.log(getNodes("div", "table"));
+// getNodes("div", "tr")

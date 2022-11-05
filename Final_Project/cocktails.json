@@ -1,0 +1,914 @@
+[
+    {
+        "name": "Aperol Spritz",
+        "cocktail_type": [
+            "Classic",
+            "Draft"
+        ],
+        "ingredients": [
+            {
+                "name": "Aperol",
+                "total": 1.5,
+                "measurement": "oz",
+                "type": "Amaro"
+            },
+            {
+                "name": "Club Soda",
+                "total": 2.0,
+                "measurement": "oz",
+                "type": "Sparkling Water"
+            },
+            {
+                "name": "Prosecco",
+                "total": 2.0,
+                "measurement": "oz",
+                "type": "Sparkling Wine"
+            }
+        ],
+        "setup": {
+            "glassware": "A/P Wine Glass",
+            "pre_ice": null,
+            "ice": "Kold Draft Cubes",
+            "post_ice": null,
+            "post_pour": null
+        },
+        "dilution": "Pre-Batched",
+        "garnish": {
+            "g_one": {
+                "name": "Orange Slice",
+                "type": "Citrus"
+            }
+        }
+    },
+    {
+        "name": "Spritz",
+        "cocktail_type": [
+            "Signature",
+            "Draft"
+        ],
+        "ingredients": [
+            {
+                "name": "Aperitivo Select",
+                "total": 4.0,
+                "measurement": "liters",
+                "type": "Amaro"
+            },
+            {
+                "name": "Canyon Road Sauvignon Blanc",
+                "total": 9.0,
+                "measurement": "liters",
+                "type": "White Wine"
+            },
+            {
+                "name": "Water",
+                "total": 5.0,
+                "measurement": "liters",
+                "type": "Water"
+            }
+        ],
+        "setup": {
+            "glassware": "A/P Wine Glass",
+            "pre_ice": null,
+            "ice": "Kold Draft Cubes",
+            "post_ice": null,
+            "post_pour": null
+        },
+        "dilution": "Pre-Batched",
+        "garnish": [
+            {
+                "name": "Orange Slice",
+                "type": "Citrus"
+            }
+        ]
+    },
+    {
+        "name": "Marco Polo Mule",
+        "cocktail_type": [
+            "Signature",
+            "Draft"
+        ],
+        "ingredients": [
+            {
+                "name": "Toki Japanese Whiskey",
+                "total": 1.5,
+                "measurement": "oz",
+                "type": "Japanese Whiskey"
+            },
+            {
+                "name": "Del Professore Bianco Vermouth",
+                "total": 0.5,
+                "measurement": "oz",
+                "type": "Vermouth"
+            },
+            {
+                "name": "Top Hat Ginger Beer Concentrate",
+                "total": 0.75,
+                "measurement": "oz",
+                "type": "Ginger Beer"
+            },
+            {
+                "name": "Lemon Juice",
+                "total": 0.25,
+                "measurement": "oz",
+                "type": "Citrus"
+            },
+            {
+                "name": "Club Soda",
+                "total": 2.0,
+                "measurement": "oz",
+                "type": "Sparkling Water"
+            },
+            {
+                "name": "Peychaud Bitters",
+                "total": 6.0,
+                "measurement": "dash",
+                "type": "Bitters"
+            }
+        ],
+        "setup": {
+            "glassware": "A/P Wine Glass",
+            "pre_ice": null,
+            "ice": "Kold Draft Cubes",
+            "post_ice": null,
+            "post_pour": "6 dashes of Peychaud Bitters"
+        },
+        "dilution": "Sliver Shake",
+        "garnish": [
+            {
+                "name": "Lime Wheel",
+                "type": "Citrus"
+            },
+            {
+                "name": "Orchid",
+                "type": "Edible Flower"
+            }
+        ]
+    },
+    {
+        "name": "Westside Mule",
+        "cocktail_type": [
+            "Signature",
+            "Draft"
+        ],
+        "ingredients": [
+            {
+                "name": "Ketel One Mint Cucumber",
+                "total": 1.5,
+                "measurement": "oz",
+                "type": "Flavored Vodka"
+            },
+            {
+                "name": "Ginger Syrup",
+                "total": 0.75,
+                "measurement": "oz",
+                "type": "Syrup"
+            },
+            {
+                "name": "Lime Juice",
+                "total": 0.75,
+                "measurement": "oz",
+                "type": "Citrus"
+            },
+            {
+                "name": "Club Soda",
+                "total": 2.0,
+                "measurement": "oz",
+                "type": "Sparkling Water"
+            }
+        ],
+        "setup": {
+            "glassware": "A/P Wine Glass",
+            "pre": "6 Mint Leaves on Bottom of Glass",
+            "ice": "Crushed Ice",
+            "post_ice": null,
+            "post_pour": null
+        },
+        "garnish": [
+            {
+                "name": "3 Cucumber Slice",
+                "type": "Fruit"
+            },
+            {
+                "name": "Mint Sprig",
+                "type": "Herb"
+            }
+        ]
+    },
+    {
+        "name": "Southside Mule",
+        "cocktail_type": [
+            "Signature",
+            "Draft"
+        ],
+        "ingredients": [
+            {
+                "name": "Grey Goose Essence Peach and Rosemary",
+                "total": 5.0,
+                "measurement": "liters",
+                "type": "Flavored Vodka"
+            },
+            {
+                "name": "Lime Juice",
+                "total": 2.0,
+                "measurement": "liters",
+                "type": "Citrus"
+            },
+            {
+                "name": "Fever Tree Ginger Beer",
+                "total": 5.0,
+                "measurement": "liters",
+                "type": "Ginger Beer"
+            }
+        ],
+        "setup": {
+            "glassware": "A/P Wine Glass",
+            "pre_ice": null,
+            "ice": "Crushed Ice",
+            "post_ice": null,
+            "post_pour": null
+        },
+        "dilution": "Pre-Batched",
+        "garnish": [
+            {
+                "name": "Lemon Wheel",
+                "type": "Citrus"
+            },
+            {
+                "name": "Rosemary",
+                "type": "Herb"
+            }
+        ]
+    },
+    {
+        "name": "Northside Mule",
+        "cocktail_type": [
+            "Signature",
+            "Draft"
+        ],
+        "ingredients": [
+            {
+                "name": "Grey Goose Essence Watermelon and Basil",
+                "total": 5.0,
+                "measurement": "liters",
+                "type": "Flavored Vodka"
+            },
+            {
+                "name": "Lime Juice",
+                "total": 2.0,
+                "measurement": "liters",
+                "type": "Citrus"
+            },
+            {
+                "name": "Fever Tree Ginger Beer",
+                "total": 5.0,
+                "measurement": "liters",
+                "type": "Ginger Beer"
+            }
+        ],
+        "setup": {
+            "glassware": "A/P Wine Glass",
+            "pre_ice": null,
+            "ice": "Crushed Ice",
+            "post_ice": null,
+            "post_pour": null
+        },
+        "dilution": "Pre-Batched",
+        "garnish": [
+            {
+                "name": "Basil Leaf",
+                "type": "Herb"
+            }
+        ]
+    },
+    {
+        "name": "Elephante",
+        "cocktail_type": [
+            "Signature"
+        ],
+        "ingredients": [
+            {
+                "name": "Any Spirit",
+                "total": 1.5,
+                "measurement": "oz",
+                "type": null
+            },
+            {
+                "name": "Lemon Juice",
+                "total": 0.75,
+                "measurement": "oz",
+                "type": "Citrus"
+            },
+            {
+                "name": "Elephante Batch",
+                "total": 1.0,
+                "measurement": "oz",
+                "type": {
+                    "name": "Elephante Batch",
+                    "ingredients": [
+                        {
+                            "name": "Passion Fruit Puree",
+                            "total": 2,
+                            "measurement": "parts",
+                            "type": "Puree"
+                        },
+                        {
+                            "name": "Almond Syrup / Orgeat",
+                            "total": 2,
+                            "measurement": "parts",
+                            "type": "Syrup"
+                        },
+                        {
+                            "name": "Montenegro",
+                            "total": 1,
+                            "measurement": "part",
+                            "type": "Amaro"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Housemade Spicy Bitters",
+                "total": 6,
+                "measurement": "dash",
+                "type": "Bitters"
+            }
+        ],
+        "setup": {
+            "glassware": "Double",
+            "pre_ice": null,
+            "ice": "Kold Draft Cubes",
+            "post_ice": null,
+            "post_pour": null
+        },
+        "dilution": "Shaken",
+        "garnish": [
+            {
+                "name": "Orange Slice",
+                "type": "Citrus"
+            },
+            {
+                "name": "Marigold",
+                "type": "Flower"
+            }
+        ]
+    },
+    {
+        "name": "Paradiso",
+        "cocktail_type": [
+            "Signature"
+        ],
+        "ingredients": [
+            {
+                "name": "Vodka",
+                "total": 1.5,
+                "measurement": "oz",
+                "type": "Vodka"
+            },
+            {
+                "name": "Lime Juice",
+                "total": 1.0,
+                "measurement": "oz",
+                "type": "Citrus"
+            },
+            {
+                "name": "Paradiso Batch",
+                "total": 1.0,
+                "measurement": "oz",
+                "type": {
+                    "name": "Pardiso Batch",
+                    "ingredients": [
+                        {
+                            "name": "Simple Syrup",
+                            "total": 3,
+                            "measurement": "parts",
+                            "type": "Syrup"
+                        },
+                        {
+                            "name": "Chareau Aloe",
+                            "total": 2,
+                            "measurement": "parts",
+                            "type": "Liqueur"
+                        },
+                        {
+                            "name": "Ginger Syrup",
+                            "total": 1,
+                            "measurement": "part",
+                            "type": "Syrup"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Cucumber Slice",
+                "total": 3,
+                "measurement": "Slices",
+                "type": "Fruit"
+            }
+        ],
+        "setup": {
+            "glassware": "Collins",
+            "pre_ice": null,
+            "ice": "Kold Draft Cubes",
+            "post_ice": null,
+            "post_pour": null
+        },
+        "dilution": "Shaken",
+        "garnish": [
+            {
+                "name": "Cucumber Slice",
+                "type": "Fruit"
+            }
+        ]
+    },
+    {
+        "name": "Since Gone",
+        "cocktail_type": [
+            "Signature"
+        ],
+        "ingredients": [
+            {
+                "name": "Vodka",
+                "total": 1.5,
+                "measurement": "oz",
+                "type": "vodka"
+            },
+            {
+                "name": "Grapefruit Juice",
+                "total": 1.5,
+                "measurement": "oz",
+                "type": "Citrus"
+            },
+            {
+                "name": "Since Gone Batch",
+                "total": 0.75,
+                "measurement": "oz",
+                "type": {
+                    "name": "Since Gone Batch",
+                    "ingredients": [
+                        {
+                            "name": "Bergamot Syrup",
+                            "total": 1,
+                            "measurement": "parts",
+                            "type": "Syrup"
+                        },
+                        {
+                            "name": "Agave Syrup",
+                            "total": 1,
+                            "measurement": "parts",
+                            "type": "Syrup"
+                        },
+                        {
+                            "name": "Aperol",
+                            "total": 1,
+                            "measurement": "part",
+                            "type": "Amaro"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Lime Juice",
+                "total": 0.5,
+                "measurement": "oz",
+                "type": "Citrus"
+            }
+        ],
+        "setup": {
+            "glassware": "Collins",
+            "pre_ice": null,
+            "ice": "Kold Draft Cubes",
+            "post_ice": null,
+            "post_pour": null
+        },
+        "dilution": "Shaken",
+        "garnish": [
+            {
+                "name": "Grapefruit Slice",
+                "type": "Citrus"
+            }
+        ]
+    },
+    {
+        "name": "Perfect Alibi",
+        "cocktail_type": [
+            "Signature"
+        ],
+        "ingredients": [
+            {
+                "name": "Vodka",
+                "total": 1.0,
+                "measurement": "oz",
+                "type": "Vodka"
+            },
+            {
+                "name": "Lime Juice",
+                "total": 0.75,
+                "measurement": "oz",
+                "type": "Citrus"
+            },
+            {
+                "name": "Perfect Alibi Batch",
+                "total": 1.0,
+                "measurement": "oz",
+                "type": {
+                    "name": "Perfect Alibi Batch",
+                    "ingredients": [
+                        {
+                            "name": "Cocchi Rosa",
+                            "total": 3,
+                            "measurement": "parts",
+                            "type": "Vermouth"
+                        },
+                        {
+                            "name": "St. Germaine",
+                            "total": 1,
+                            "measurement": "part",
+                            "type": "Liqueur"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Simple Syrup",
+                "total": 0.5,
+                "measurement": "oz",
+                "type": "Syrup"
+            },
+            {
+                "name": "Club Soda",
+                "total": 2.0,
+                "measurement": "oz",
+                "type": "Sparkling Water"
+            }
+        ],
+        "setup": {
+            "glassware": "Collins",
+            "pre_ice": null,
+            "ice": "Kold Draft Cubes",
+            "post_ice": "2oz Club Soda",
+            "post_pour": null
+        },
+        "dilution": "Shaken",
+        "garnish": [
+            {
+                "name": "Orange Slice",
+                "type": "Citrus"
+            },
+            {
+                "name": "Marigold",
+                "type": "Flower"
+            }
+        ]
+    },
+    {
+        "name": "Violet Curtain",
+        "cocktail_type": [
+            "Signature"
+        ],
+        "ingredients": [
+            {
+                "name": "Vodka",
+                "total": 1.5,
+                "measurement": "oz",
+                "type": "Vodka"
+            },
+            {
+                "name": "Grapefruit Juice",
+                "total": 1.5,
+                "measurement": "oz",
+                "type": "Citrus"
+            },
+            {
+                "name": "Hibiscus Syrup",
+                "total": 0.75,
+                "measurement": "oz",
+                "type": "Syrup"
+            },
+            {
+                "name": "Lime Juice",
+                "total": 0.5,
+                "measurement": "oz",
+                "type": "Citrus"
+            },
+            {
+                "name": "Violet Curtain Batch",
+                "total": 0.5,
+                "measurement": "oz",
+                "type": {
+                    "name": "Violet Curtain Batch",
+                    "ingredients": [
+                        {
+                            "name": "Salers",
+                            "total": 3,
+                            "measurement": "parts",
+                            "type": "Aperitif"
+                        },
+                        {
+                            "name": "Pine Needle Syrup",
+                            "total": 1,
+                            "measurement": "part",
+                            "type": "Syrup"
+                        },
+                        {
+                            "name": "Cucumber Slices",
+                            "total": 3,
+                            "measurement": "slices",
+                            "type": "Fruit"
+                        }
+                    ]
+                }
+            }
+        ],
+        "setup": {
+            "glassware": "Collins",
+            "pre_ice": null,
+            "ice": "Kold Draft Cubes",
+            "post_ice": null,
+            "post_pour": null
+        },
+        "dilution": "Shaken",
+        "garnish": [
+            {
+                "name": "Cucumber",
+                "type": "Fruit"
+            }
+        ]
+    },
+    {
+        "name": "Off The Grid",
+        "cocktail_type": [
+            "Signature"
+        ],
+        "ingredients": [
+            {
+                "name": "Vodka",
+                "total": 1.0,
+                "measurement": "oz",
+                "type": "Vodka"
+            },
+            {
+                "name": "Txmista Blanco Vermouth",
+                "total": 0.75,
+                "measurement": "oz",
+                "type": "Vermouth"
+            },
+            {
+                "name": "Lemon Juice",
+                "total": 0.5,
+                "measurement": "oz",
+                "type": "Citrus"
+            },
+            {
+                "name": "Honey Syrup",
+                "total": 0.5,
+                "measurement": "oz",
+                "type": "Syrup"
+            },
+            {
+                "name": "Mint Leaves",
+                "total": 6,
+                "measurement": "leaves",
+                "type": "Herb"
+            },
+            {
+                "name": "Matcha Tea",
+                "total": 0.5,
+                "measurement": "oz",
+                "type": {
+                    "name": "Matcha Tea",
+                    "ingredients": [
+                        {
+                            "name": "Matcha",
+                            "total": 0.5,
+                            "measurement": "tsp",
+                            "type": "Herb"
+                        },
+                        {
+                            "name": "Hot Water",
+                            "total": 6,
+                            "measurement": "oz",
+                            "type": "Water"
+                        }
+                    ]
+                }
+            }
+        ],
+        "setup": {
+            "glassware": "Collins",
+            "pre_ice": null,
+            "ice": "Crushed Ice",
+            "post_ice": "dump",
+            "post_pour": "Top with Chilled Matcha Tea"
+        },
+        "dilution": "Sliver Shake",
+        "garnish": [
+            {
+                "name": "Lemon Wheel",
+                "type": "Citrus"
+            },
+            {
+                "name": "Mint Sprig",
+                "type": "Herb"
+            }
+        ]
+    },
+    {
+        "name": "Gianno",
+        "cocktail_type": [
+            "Signature"
+        ],
+        "ingredients": [
+            {
+                "name": "Gin",
+                "total": 1.0,
+                "measurement": "oz",
+                "type": "Gin"
+            },
+            {
+                "name": "Zirbenze Stone Pine",
+                "total": 1.0,
+                "measurement": "oz",
+                "type": "Liqueur"
+            },
+            {
+                "name": "Lemon Juice",
+                "total": 1.0,
+                "measurement": "oz",
+                "type": "Citrus"
+            },
+            {
+                "name": "Simple Syrup",
+                "total": 0.5,
+                "measurement": "oz",
+                "type": "Syrup"
+            },
+            {
+                "name": "Club Soda",
+                "total": 2.0,
+                "measurement": "oz",
+                "type": "Sparkling Water"
+            }
+        ],
+        "setup": {
+            "glassware": "Collins",
+            "pre_ice": null,
+            "ice": "Kold Draft Cubes",
+            "post_ice": "Add Club Soda",
+            "post_pour": null
+        },
+        "dilution": "Sliver Shake",
+        "garnish": [
+            {
+                "name": "Lemon Wheel",
+                "type": "Citrus"
+            },
+            {
+                "name": "Rosemary Sprig",
+                "type": "Herb"
+            }
+        ]
+    },
+    {
+        "name": "Court Royale",
+        "cocktail_type": [
+            "Signature"
+        ],
+        "ingredients": [
+            {
+                "name": "Court Royale Batch",
+                "total": 2.25,
+                "measurement": "oz",
+                "type": {
+                    "name": "Court Royale Batch",
+                    "ingredients": [
+                        {
+                            "name": "Gin",
+                            "total": 4,
+                            "measurement": "Parts",
+                            "type": "Gin"
+                        },
+                        {
+                            "name": "Cocchi Americano",
+                            "total": 3,
+                            "measurement": "parts",
+                            "type": "Vermouth"
+                        },
+                        {
+                            "name": "Lairds Apple 86pf",
+                            "total": 2,
+                            "measurement": "parts",
+                            "type": "Apple Brandy"
+                        },
+                        {
+                            "name": "Lemon Juice",
+                            "total": 3,
+                            "measurement": "parts",
+                            "type": "Citrus"
+                        },
+                        {
+                            "name": "Simple Syrup",
+                            "total": 2,
+                            "measurement": "parts",
+                            "type": "Syrup"
+                        }
+                    ]
+                }
+            }
+        ],
+        "setup": {
+            "glassware": "Coupe",
+            "pre_ice": null,
+            "ice": null,
+            "post_ice": null,
+            "post_pour": null
+        },
+        "dilution": "Shaken",
+        "garnish": [
+            {
+                "name": "Lemon Wheel",
+                "type": "Citrus"
+            },
+            {
+                "name": "Rosemary Sprig",
+                "type": "Herb"
+            }
+        ]
+    },
+    {
+        "name": "Social Butterfly",
+        "cocktail_type": [
+            "Signature"
+        ],
+        "ingredients": [
+            {
+                "name": "Gin",
+                "total": 1.5,
+                "measurement": "oz",
+                "type": "Gin"
+            },
+            {
+                "name": "Guava Peppercorn Syrup",
+                "total": 0.75,
+                "measurement": "oz",
+                "type": "Syrup"
+            },
+            {
+                "name": "Lime Juice",
+                "total": 0.75,
+                "measurement": "oz",
+                "type": "Citrus"
+            },
+            {
+                "name": "Social Butterfly Batch",
+                "total": 0.75,
+                "measurement": "oz",
+                "type": {
+                    "name": "Social Butterfly Batch",
+                    "ingredients": [
+                        {
+                            "name": "St. Germain",
+                            "total": 3,
+                            "measurement": "parts",
+                            "type": "Liqueur"
+                        },
+                        {
+                            "name": "Granada-Vallet",
+                            "total": 1,
+                            "measurement": "parts",
+                            "type": "Liqueur"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Club Soda",
+                "total": 2.0,
+                "measurement": "oz",
+                "type": "Sparkling Water"
+            }
+        ],
+        "setup": {
+            "glassware": "Collins",
+            "pre_ice": null,
+            "ice": "Kold Draft Cubes",
+            "post_ice": "Add Club Soda",
+            "post_pour": null
+        },
+        "dilution": "Sliver Shake",
+        "garnish": [
+            {
+                "name": "Lemon Wheel",
+                "type": "Citrus"
+            },
+            {
+                "name": "Lime Wheel",
+                "type": "Citrus"
+            },
+            {
+                "name": "Pink Peppercorn",
+                "type": "Fruit"
+            }
+        ]
+    }
+
+]
