@@ -118,7 +118,7 @@ function writeTable(object) {
         tableHeader.append(newHeaderTitle);
         // append the <th> to the <tr>
         newRow.appendChild(tableHeader);
-        
+
     });
     // here we loop through every object in the array and create the table rows with the corresponding table data
     for (let i = 0; i < object.length; i++) {
@@ -141,10 +141,10 @@ function writeTable(object) {
                     paragraph.style.fontSize = "18px";
 
                     let lineBreak = document.createElement('br');
-                    
+
                     // we are checking each item and seeing if it has the word 'due' in it and if it does, we are putting that to the variable somethingDue
                     let somethingDue = item.includes("due");
-                    
+
                     // if any of the text nodes have the word 'due' in it, the font color of that text node will be red
                     if (somethingDue === true) {
                         paragraph.style.color = "red";
@@ -182,7 +182,7 @@ function writeTable(object) {
     };
     // grabs every other even row in the document
     let evenTableRows = document.querySelectorAll('tr:nth-child(even)');
-    
+
     // grabs every other odd row in the document
     let oddTableRows = document.querySelectorAll('tr:nth-child(odd)');
     // grabs the document table header
