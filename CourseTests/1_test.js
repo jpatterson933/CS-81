@@ -94,7 +94,7 @@ function SumDiff(numbers) {
     return Math.abs(totalEvenNum - totalOddNum);
 };
 // print our SumDiff() to the screen
-console.log(SumDiff(numArray));
+// console.log(SumDiff(numArray));
 
 /*
 Problem 2 - Recursive Sum (30 pts)
@@ -118,8 +118,17 @@ function listToArray(object) {
     let newArray = []
     // inner recursive function that will dive into any key that has a nested object
     function findNestedValue(nestedEntry) {
+        // can use this as a terminate option
+        function getPageCount(books) {
+            if(books == null || books.pages == undefined) {
+                return 0;
+            }
+            return books.pages + getPageCount(books.next);
+        }
         // check to see if nestedEntry is string
         if (typeof nestedEntry === "number") {
+            console.log(nestedEntry)
+            console.log(getPageCount(nestedEntry))
             // if returns as string, will get pushed into array
             newArray.push(nestedEntry)
             // check to see if nestedEntry is an object
