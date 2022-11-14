@@ -80,6 +80,14 @@ writeTable(mountains);
     that this will return the tag name in all uppercase. Use the toLowerCase or toUpperCase string methods to compensate for this.
 */
 
+// function webPage() {
+//     let req = new XMLHttpRequest();
+//     req.open('GET', 'http://weatherstatsjeff.com', false);
+//     req.send(null);
+//     if (req.status == 200)
+//         dump(req.responseText);
+// }
+
 
 function getNodes(node, string) {
     let captureNodes = [];
