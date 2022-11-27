@@ -1,4 +1,4 @@
-import cocktails from './cocktails.json' assert {type: 'json'};
+import cocktails from '../cocktails.json' assert {type: 'json'};
 
 console.log(cocktails[1].name)
 
