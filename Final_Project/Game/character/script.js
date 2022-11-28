@@ -7,13 +7,18 @@ const CANVAS_HEIGHT = canvas.height = 600;
 // THIS IS OUR IDLE SPRITE   - remember frameX needs to equal the amount of frames we have in the sprite animation frame
 const heroIdle = new Image();
 heroIdle.src = './imgs/idle.png';
-const spriteIdleWidth = 231;
+const spriteIdleWidth = 250;
 const spriteIdleHeight = 600;
 
 const heroRunning = new Image();
 heroRunning.src = './imgs/running.png';
-const spriteRunningWidth = 430;
+const spriteRunningWidth = 350;
 const spriteRunningHeight = 600;
+
+const heroJumpAttack = new Image();
+heroJumpAttack.src = './imgs/jump-attack.png';
+const spriteJumpAttackWidth = 503;
+const spriteJumpAttackHeight = 600;
 
 
 // change sprite variables
@@ -22,7 +27,7 @@ let frameX = 0;
 let frameY = 0;
 let gameFrame = 0;
 // the higher this number, the slower the animation will render
-let staggerFrames = 10;
+let staggerFrames = 7;
 
 
 const spriteAnimations = [];
@@ -41,6 +46,13 @@ const animationStates = [
         frames: 10,
         width: spriteRunningWidth,
         height: spriteRunningHeight
+    }, 
+    {
+        name:'jump-attack',
+        src:heroJumpAttack,
+        frames: 10,
+        width: spriteJumpAttackWidth,
+        height: spriteJumpAttackHeight
     }
 ]
 
@@ -52,15 +64,24 @@ let heroState = "idle";
 
 // these keys toggle between animations (wrote this on my own :))
 window.addEventListener("keydown", event => {
-    if( event.key == "v" ){
-        heroState = "running"
+    if (event.code == "Space") {
+        heroState = "jump-attack"
     }
 })
 
-window.addEventListener("keyup", event => {
-    if(event.key == "v"){
-        heroState = "idle"
+// window.addEventListener("keyup", event => {
+//     if (event.key == "v") {
+//         heroState = "idle"
+//     }
+// })
+window.addEventListener("keydown", event => {
+    if(event.key == "d") {
+        heroState = "running"
     }
+})
+window.addEventListener("keyup", event => {
+        heroState = "idle";
+
 })
 
 //state represents each object in the array, index will store the array index number
@@ -117,6 +138,23 @@ function animate() {
             gameFrame++;
             requestAnimationFrame(animate);
             break;
+        }
+
+        case ("jump-attack"): {
+
+            // here we are calculating the position of the sprite 9 -- the variable cycles from 0 to 9
+            let position = Math.floor(gameFrame / staggerFrames) % spriteAnimations["idle"].loc.length;
+            frameX = animationStates[2].width * position;
+            // ctx.fillRect(50, 50, 100, 100);
+            ctx.drawImage(animationStates[2].src, frameX, frameY * animationStates[2].height, animationStates[2].width, animationStates[2].height, 0, 0, animationStates[2].width, animationStates[2].height);
+            if (gameFrame % staggerFrames == 0) {
+                if (frameX < 9) frameX++;
+                else frameX = 0;
+            }
+            gameFrame++;
+            requestAnimationFrame(animate);
+            break;
+
         }
     }
 }
