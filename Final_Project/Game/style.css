@@ -1,10 +1,13 @@
+body {
+    background: black;
+}
+
 #canvas1 {
-    /* background-color: aqua; */
-    border: 5px solid black;
     position: absolute;
+    border: 5px solid white;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 600px;
-    height: 600px;
+    width: 800px;
+    height: 700px;
 }
