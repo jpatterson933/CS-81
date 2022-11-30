@@ -66,7 +66,7 @@ for (let i = 0; i < numberOfEnemeies; i++) {
     enemiesArray.push(new Enemy());
 }
 
-function animate() {
+function animateEnemy() {
     ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT)
 
     enemiesArray.forEach(enemy => {
@@ -77,7 +77,7 @@ function animate() {
     gameFrame++;
 
     // creates animation loop
-    requestAnimationFrame(animate)
+    requestAnimationFrame(animateEnemy)
 }
 
-animate();
+animateEnemy();
