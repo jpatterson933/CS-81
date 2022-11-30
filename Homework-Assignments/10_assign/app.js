@@ -1,10 +1,30 @@
 // import packages we need to run the express app
 let express = require('express');
 let app = express();
+let cors = require('cors');
+
+let corsOptions = {
+    origin: '*', 
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    optionsSuccessStatus: 200
+}
+
+
+
 let bodyParser = require("body-parser");
+
+//middleware
+app.use(cors());
 
 // adding a body parser to handle JSON for us automagically
 app.use(bodyParser.json())
+
+app.use('/', express.static(__dirname))
+
+// serve up page
+app.get('/', function (req, res) {
+    res.sendFile('index.html', { root: __dirname });
+})
 
 // our in-memory fake data store is just an array of javascript objects
 // we declare it here so that both endpoints can use it
@@ -15,7 +35,7 @@ let books = [
 ]
 
 // VIEW ALL BOOKS
-app.get('/book/all', function (req, res) {
+app.get('/book/all', cors(corsOptions), function (req, res) {
 
     // initialize the return data
     let data = [];
@@ -32,7 +52,7 @@ app.get('/book/all', function (req, res) {
 });
 
 // VIEW BOOK BY TITLE
-app.get('/book', function (req, res) {
+app.get('/book', cors(corsOptions), function (req, res) {
     // get the query params
     let title = req.query.title;
 

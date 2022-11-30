@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/jpatterson933/CS-81/issues"
   },
-  "homepage": "https://github.com/jpatterson933/CS-81#readme"
+  "homepage": "https://github.com/jpatterson933/CS-81#readme",
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
 }
