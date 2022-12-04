@@ -192,6 +192,8 @@ window.addEventListener("keyup", event => {
 
 })
 
+
+
 function animateHero() {
 
     // ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
