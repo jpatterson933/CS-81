@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books - ExpressJS Web Application</title>
+    <!-- jquery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Linked stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- inline styling  -->
+    <style>
+        input {
+            width: 100px
+        }
+
+        label {
+            display: inline-block;
+            text-align: right;
+        }
+
+        #output {
+            width: 200px
+        }
+
+        .data {
+            margin-bottom: 5px;
+        }
+
+        .finput {
+            float: right;
+        }
+    </style>
+    </head>
+
+    <body>
+        <div class="search">
+            Search Book Title:<br><br>
+            <input id="title" type="text" name="book_title" onchange="showBook(this.value)" />
+            <button id="submit" type="button">Search</button><br><br>
+        </div>
+        <div id="output">
+            Enter New Book<br><br>
+            <label class="data" for="data-title">Title</label>
+            <input id="data-title" class="finput" type="text" name="book_info" />
+            <br>
+            <label class="data" for="data-author">Author</label>
+            <input id="data-author" class="finput" type="text" name="book_info" />
+            <br>
+            <label class="data" for="data-pages"># Pages</label>
+            <input id="data-pages" class="finput" type="text" name="book_info" />
+            <br>
+            <label class="data" for="data-condition">Condition</label>
+            <input id="data-condition" class="finput" type="text" name="book_info" />
+            <button id="save" type="button">Save</button>
+        </div>
+        <!-- Adding my code here  -->
+        <div id="show">Search for a book above...</div>
+        <button id="show-all">View All Books</button>
+
+        <!-- inline script  -->
+        <script>
+            // function that grabs all book from database and returns the array that can be used later
+            const booksArray = () => {
+                // initialize data
+                let data = [];
+                $.get(`http://localhost:3000/book/all`, (resData, status) => {
+                    let books = resData.book;
+                    // push books into empty data array
+                    books.forEach(book => { data.push(book) })
+                })
+                return data;
+            }
+            // we call books here so it prepopulates the array so we can use books in our other functions - also means we only api call once
+            const books = booksArray();
+            // function to show a single book
+            function showBook(book) {
+
+                // our jquery get request
+                $.get(`http://localhost:3000/book?title=${book}`, (resData, status) => {
+                    // console.log(resData, "res data", status, "status", book, "book!")
+                    console.log(resData, status)
+                    // if undefined it will continue to make the api call 
+                    if (resData.book == undefined) { return }
+                    // once the book is found it will run this program
+                    if (status == "success") {
+                        // this is our book, assign to res to simplify response
+                        const res = resData.book;
+                        let showBook = $("#show");
+                        // clear anything from this element so we can view one book at a time
+                        showBook.empty();
+                        // create container for our book to sit on
+                        const bookContainer = document.createElement('div');
+                        bookContainer.setAttribute('class', 'book-set');
+                        bookContainer.setAttribute('id', `${res.title}`)
+                        // create our html elements
+                        let titleContainer = document.createElement('h1');
+                        let authorContainer = document.createElement('p');
+                        let pagesContainer = document.createElement('p');
+                        let qualityContainer = document.createElement('p');
+                        // create the text for each html element
+                        let title = document.createTextNode(`Title: ${res.title}`);
+                        let author = document.createTextNode(`Author: ${res.author}`);
+                        let pages = document.createTextNode(`Pages: ${res.pages}`);
+                        let quality = document.createTextNode(`Quality: ${res.quality}`);
+                        // append text to html elements
+                        titleContainer.append(title);
+                        authorContainer.append(author);
+                        pagesContainer.append(pages);
+                        qualityContainer.append(quality);
+                        // append everything to the book container
+                        bookContainer.append(titleContainer, authorContainer, pagesContainer, qualityContainer)
+                        // append this to our showbook html element
+                        showBook.append(bookContainer)
+                    }
+                })
+            }
+            // 
+
+
+            function saveNewBook() {
+                // grab data from inputs
+                let author = $("#data-author")[0].value;
+                let title = $("#data-title")[0].value;
+                let pages = $("#data-pages")[0].value;
+                let quality = $("#data-condition")[0].value;
+                // console.log(author, title, pages, quality)
+                // put our data into an object
+                let data = {
+                    author: author,
+                    title: title,
+                    pages: Number(pages),
+                    quality: quality
+                }
+                // set up a new xhr request
+                let xhr = new XMLHttpRequest();
+                // define type and url
+                xhr.open("POST", "http://localhost:3000/book");
+                // set headers
+                xhr.setRequestHeader("Accept", "application/json");
+                xhr.setRequestHeader("Content-Type", "application/json");
+                // check status 4 means that the operation is complete
+                xhr.onreadystatechange = () => {
+                    if (xhr.readyState === 4) {
+                        // status should be 200
+                        console.log(xhr.status);
+                        console.log(xhr.responseText);
+                    }
+                }
+                // send our data to the express server
+                xhr.send(JSON.stringify(data));
+            }
+
+            function viewAll() {
+                // if there are no books this should alert us that no books exist
+                if (books.length === 0) {
+                    alert("There are no books saved!");
+                    return;
+                }
+                // grab our show element from the html and set it to showBook
+                let showBook = $("#show");
+                // clear anything previously appended to this showBook element
+                showBook.empty();
+                // for each function that goes through our books array
+                books.forEach(book => {
+                    // create the book container and set its attributes
+                    const bookContainer = document.createElement('div');
+                    bookContainer.setAttribute('class', 'book-set');
+                    bookContainer.setAttribute('id', `${book.title}`)
+                    // create html elements
+                    let titleContainer = document.createElement('h1');
+                    let authorContainer = document.createElement('h4');
+                    let pagesContainer = document.createElement('h4');
+                    let qualityContainer = document.createElement('h4');
+                    // create text nodes for html elements
+                    let title = document.createTextNode(`Title: ${book.title}`);
+                    let author = document.createTextNode(`Author: ${book.author}`);
+                    let pages = document.createTextNode(`Pages: ${book.pages}`);
+                    let quality = document.createTextNode(`Quality: ${book.quality}`);
+                    // set up our delete button
+                    let deleteButton = document.createElement('button');
+                    let deleteText = document.createTextNode('Delete')
+                    // set value attribute to the title fo the book and an onClick attribute to our deleteBook() function
+                    deleteButton.setAttribute('value', `${book.title}`)
+                    deleteButton.setAttribute('onClick', `deleteBook()`)
+                    // append text to element
+                    titleContainer.append(title);
+                    authorContainer.append(author);
+                    pagesContainer.append(pages);
+                    qualityContainer.append(quality);
+                    deleteButton.append(deleteText)
+                    // append elements to book container
+                    bookContainer.append(titleContainer, authorContainer, pagesContainer, qualityContainer, deleteButton)
+                    // append book container to our showbook 
+                    showBook.append(bookContainer)
+                });
+            }
+            // on click events
+            // show single book 
+            $("#submit").click((event) => { showBook() })
+            // save new book
+            $("#save").click(() => { saveNewBook() })
+            // show all books
+            $("#show-all").click((event) => { viewAll() })
+
+            // function to delete a book that is attached to the onClick attribute of the button that will be created for each button on each book
+            function deleteBook(book) {
+                // the event.target.value is the title of the book that we are assigning to data
+                let data = event.target.value;
+                // set up a new xhr request
+                let xhr = new XMLHttpRequest();
+                // // define type and url
+                xhr.open("DELETE", `http://localhost:3000/book?title=${data}`, true);
+                // // set headers
+                xhr.setRequestHeader("Accept", "application/json");
+                xhr.send(JSON.stringify(data));
+                // alert the user the book has been deleted
+                alert(`${data} has been deleted!`)
+                // reload the window
+                window.location.reload();
+            }
+        </script>
+    </body>
+</html>

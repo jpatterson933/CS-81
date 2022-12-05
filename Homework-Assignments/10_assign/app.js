@@ -3,28 +3,29 @@ let express = require('express');
 let app = express();
 let cors = require('cors');
 
+// cors options that allows the calls to come from anywhere * with set methods
 let corsOptions = {
-    origin: '*', 
+    origin: '*',
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     optionsSuccessStatus: 200
-}
+};
 
 
-
+// set the body-parser package to bodyParser 
 let bodyParser = require("body-parser");
 
 //middleware
 app.use(cors());
 
-// adding a body parser to handle JSON for us automagically
-app.use(bodyParser.json())
+// adding a body parser to handle JSON for us automatically
+app.use(bodyParser.json());
 
-app.use('/', express.static(__dirname))
+app.use('/', express.static(__dirname));
 
 // serve up page
 app.get('/', function (req, res) {
-    res.sendFile('index.html', { root: __dirname });
-})
+    res.sendFile('book.html', { root: __dirname });
+});
 
 // our in-memory fake data store is just an array of javascript objects
 // we declare it here so that both endpoints can use it
@@ -32,9 +33,9 @@ let books = [
     { "author": "me", "title": "BookA", "pages": 600, "quality": "new" },
     { "author": "you", "title": "BookB", "pages": 400, "quality": "used" },
     { "author": "us", "title": "BookC", "pages": 500, "quality": "old" },
-]
+];
 
-// VIEW ALL BOOKS
+// VIEW ALL BOOKS - added cors(corsOptions) to get rid of the cors policy error
 app.get('/book/all', cors(corsOptions), function (req, res) {
 
     // initialize the return data
@@ -42,7 +43,7 @@ app.get('/book/all', cors(corsOptions), function (req, res) {
 
     // search for the book
     for (let i = 0; i < books.length; i++) {
-            data.push(books[i]);
+        data.push(books[i]);
     }
 
     // pass JSON back to client
@@ -51,7 +52,7 @@ app.get('/book/all', cors(corsOptions), function (req, res) {
     res.send({ "book": data });
 });
 
-// VIEW BOOK BY TITLE
+// VIEW BOOK BY TITLE - added cors(corsOptions) to get rid of the cors policy error
 app.get('/book', cors(corsOptions), function (req, res) {
     // get the query params
     let title = req.query.title;
@@ -73,9 +74,9 @@ app.get('/book', cors(corsOptions), function (req, res) {
     res.send({ "book": data });
 });
 
-// CREATE A BOOK
-app.post('/book', function (req, res) {
-
+// CREATE A BOOK - added cors(corsOptions) to get rid of the cors policy error
+app.post('/book', cors(corsOptions), function (req, res) {
+    
     res.set('Content-type', 'application/json');
     // access the request POST body from the request object
     let data = req.body;
@@ -99,12 +100,9 @@ app.post('/book', function (req, res) {
 
 // DELETE A BOOK
 app.delete('/book', function (req, res) {
-
-    console.log("req params", req.query.title)
-
     // find the index number of the book and then remove it from books array
     const itemIndex = books.findIndex(({ title }) => title === req.query.title)
-    if(itemIndex>=0) {
+    if (itemIndex >= 0) {
         books.splice(itemIndex, 1);
     }
 
@@ -115,8 +113,7 @@ app.delete('/book', function (req, res) {
     // Shows updated list of books
     res.send({ books });
 
-    
-})
+});
 
 // listen for HTTP requests on port 3000
 app.listen(3000, function () {
