@@ -1,0 +1,27 @@
+/* Give entire background a color of black  */
+body {
+    background-color: black;
+}
+/* Styling for the upper left stock information  */
+#stock-information {
+    font-size: 2em;
+    font-family: 'Robot Mono', monospace;
+    color: rgb(46, 115, 213);
+    text-align: right;
+    width: fit-content;
+}
+
+/* Style or middle console where all the action happens */
+#tick-display, #funds-display, #stocks-display {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 4em;
+    font-family: 'Robot Mono', monospace;
+    color: rgb(46, 115, 213);
+}
+/* Styling for the ticker news section  */
+#dashboard-news, #ticker-title {
+    font-size: 2em;
+    font-family: 'Robot Mono', monospace;
+    color: rgb(46, 115, 213);
+}

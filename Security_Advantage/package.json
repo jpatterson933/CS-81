@@ -1,0 +1,26 @@
+{
+  "name": "security_advantage",
+  "version": "1.0.0",
+  "description": "An app to look at stocks.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "NA"
+  },
+  "repository": {
+    "url": "NA"
+  },
+  "keywords": [
+    "stocks",
+    "prices",
+    "day",
+    "trading"
+  ],
+  "author": "Jeffery W. Patterson",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.2.1",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
